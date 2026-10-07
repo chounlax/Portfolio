@@ -1,163 +1,19 @@
-/* Page dédiée au projet Wheello — s'appuie sur les variables et styles de index.css */
+/* Page dédiée au projet Wheello — complète page.css */
 
-/* ---------- Navigation ---------- */
-.wnav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.8rem var(--side);
-  background: rgba(243, 246, 251, 0.97);
-  border-bottom: 2px solid var(--ink);
-}
-
-.wnav .nav__logo {
-  position: static;
-}
-
-.wnav__links {
-  display: flex;
-  gap: 1.6rem;
-}
-
-.wnav__links a,
-.wnav__back {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
-
-.wnav__links a:hover {
-  color: var(--blue);
-}
-
-.wnav__back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.8rem;
-  border: 2px solid var(--ink);
-  background: var(--card);
-  box-shadow: 3px 3px 0 var(--ink);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.wnav__back:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 var(--blue);
-}
-
-/* ---------- En-tête ---------- */
-.whero {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding: clamp(3.5rem, 8vw, 6rem) var(--side) clamp(4.5rem, 9vw, 7rem);
-  overflow: hidden;
-  color: #f3f6fb;
-  background-color: var(--night);
-  background-image:
-    linear-gradient(rgba(143, 180, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(143, 180, 255, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-.whero__kicker,
-.wkicker {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-}
-
-.whero__kicker {
-  color: var(--blue-mist);
-}
-
-.whero__title {
-  margin: 1rem 0 1.2rem;
-  font-size: clamp(3.6rem, 11vw, 8.5rem);
-  font-weight: 900;
-  letter-spacing: -0.06em;
-  line-height: 0.88;
-}
-
-.whero__title em {
-  font-style: normal;
-  color: var(--blue);
-}
-
-.whero__tagline {
-  max-width: 34rem;
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-  line-height: 1.55;
-  color: #c9d4ea;
-}
-
-.whero__meta {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 2rem 0 0;
-  border: 1.5px solid rgba(169, 184, 214, 0.35);
-}
-
-.whero__meta div {
-  padding: 0.8rem 1rem;
-  border: 0.75px solid rgba(169, 184, 214, 0.35);
-}
-
-.whero__meta dt {
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  color: var(--blue-mist);
-}
-
-.whero__meta dd {
-  margin: 0.2rem 0 0;
-  font-weight: 700;
-}
-
-.whero__cta {
-  margin-top: 2rem;
-}
-
-.whero__cta .btn--light {
-  box-shadow: 6px 6px 0 var(--blue);
-}
-
-.whero__visual {
+.phero__visual {
   position: relative;
   padding: 0 4.5rem 3rem 0;
 }
 
-.whero__visual .frame-browser {
+.phero__visual .frame-browser {
   box-shadow: 10px 10px 0 var(--blue);
 }
 
-.whero__visual .frame-phone {
+.phero__visual .frame-phone {
   position: absolute;
   right: 0;
   bottom: 0;
   width: clamp(110px, 24%, 170px);
-}
-
-.whero__corner {
-  position: absolute;
-  left: var(--side);
-  bottom: 1.6rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: rgba(169, 184, 214, 0.6);
 }
 
 /* ---------- Cadres de captures ---------- */
@@ -238,16 +94,6 @@
   aspect-ratio: 9 / 20;
   object-fit: cover;
   border-radius: 20px;
-}
-
-/* ---------- Titres de section ---------- */
-.wtitle .wkicker {
-  margin-bottom: 0.8rem;
-  color: var(--blue);
-}
-
-.wtitle .title {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 /* ---------- Le besoin ---------- */
@@ -544,23 +390,6 @@
   color: var(--muted);
 }
 
-/* ---------- Ma contribution (bloc sombre) ---------- */
-.wdark {
-  margin-top: clamp(5rem, 11vw, 8.5rem);
-  padding-bottom: clamp(5rem, 10vw, 7rem);
-  color: #f3f6fb;
-  background-color: var(--night);
-  background-image:
-    linear-gradient(rgba(143, 180, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(143, 180, 255, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-.wdark .title span,
-.wdark .wkicker {
-  color: #6f93ff;
-}
-
 .contrib {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -700,41 +529,6 @@
   color: var(--blue);
 }
 
-/* ---------- Fin de page ---------- */
-.wout {
-  padding-bottom: clamp(5rem, 10vw, 7rem);
-}
-
-.wout__box {
-  padding: clamp(2rem, 5vw, 3.5rem);
-  border: 2px solid var(--ink);
-  background: var(--blue);
-  color: #fff;
-  box-shadow: 10px 10px 0 var(--ink);
-}
-
-.wout__box .wkicker {
-  color: #dbe5ff;
-}
-
-.wout__box h2 {
-  margin: 0.8rem 0 1.8rem;
-  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
-}
-
-.wout__cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.wout__cta .btn--dark {
-  box-shadow: 6px 6px 0 #fff;
-}
-
 /* ---------- Adaptations ---------- */
 @media (prefers-reduced-motion: reduce) {
   .arch__packet {
@@ -752,15 +546,7 @@
 }
 
 @media (max-width: 860px) {
-  .wnav__links {
-    display: none;
-  }
-  .whero,
-  .need,
-  .show {
-    grid-template-columns: 1fr;
-  }
-  .whero__visual {
+  .phero__visual {
     padding-right: 3rem;
   }
   .show--mobile .show__text {
@@ -796,23 +582,18 @@
     left: calc(50% - 4px);
     animation-name: packet-y;
   }
+  .need,
+  .show {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
-  .whero__meta {
-    grid-template-columns: 1fr;
-  }
-  .whero__corner {
-    display: none;
-  }
   .show__shots--web {
     grid-template-columns: 1fr;
   }
   .wstack__row {
     grid-template-columns: 1fr;
     gap: 0.6rem;
-  }
-  .wout__cta .btn {
-    width: 100%;
   }
 }

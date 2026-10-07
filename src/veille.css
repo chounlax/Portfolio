@@ -1,0 +1,615 @@
+/* Page de veille technologique — complète page.css */
+
+.vhero__title {
+  font-size: clamp(3.2rem, 9vw, 7.2rem);
+}
+
+/* ---------- Console de l'en-tête ---------- */
+.vconsole {
+  border: 2px solid #f3f6fb;
+  background: #0d1a33;
+  box-shadow: 10px 10px 0 var(--blue);
+  font-family: var(--mono);
+}
+
+.vconsole__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 2px solid #f3f6fb;
+}
+
+.vconsole__bar i {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid #f3f6fb;
+}
+
+.vconsole__bar i:first-child {
+  background: var(--blue);
+}
+
+.vconsole__bar span {
+  margin-left: 0.6rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--blue-mist);
+}
+
+.vconsole__pulse {
+  display: block;
+  width: 100%;
+  height: 90px;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed rgba(169, 184, 214, 0.3);
+}
+
+.vconsole__pulse polyline {
+  fill: none;
+  stroke: #6f93ff;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: pulse-draw 3.2s linear infinite;
+}
+
+@keyframes pulse-draw {
+  70%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.vconsole__lines {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.2rem 1.1rem 1.4rem;
+  font-size: clamp(0.72rem, 1.3vw, 0.85rem);
+  color: #f3f6fb;
+}
+
+.vconsole__lines b {
+  margin-right: 0.6rem;
+  color: var(--blue-mist);
+  font-weight: 400;
+}
+
+.vconsole__lines span {
+  display: block;
+  margin: 0.2rem 0 0 2.1rem;
+  color: var(--blue-mist);
+}
+
+.vconsole__lines .warn {
+  color: #ffc861;
+}
+
+.vconsole__lines .ok {
+  color: #6ee7a1;
+}
+
+/* ---------- Problématique & méthode ---------- */
+.vquestion {
+  position: relative;
+  margin: 0;
+  padding: clamp(1.6rem, 4vw, 2.6rem) clamp(1.4rem, 4vw, 2.6rem) clamp(1.6rem, 4vw, 2.6rem) clamp(4rem, 9vw, 6.5rem);
+  border: 2px solid var(--ink);
+  border-left: 10px solid var(--blue);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.vquestion span {
+  position: absolute;
+  left: clamp(1rem, 3vw, 1.8rem);
+  top: 50%;
+  translate: 0 -50%;
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--blue);
+}
+
+.vquestion p {
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.vsub {
+  margin: 3rem 0 1.4rem;
+  color: var(--blue);
+}
+
+.vcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.vcard svg {
+  color: var(--blue);
+}
+
+.vcard h3 {
+  margin-top: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.vcard p {
+  color: var(--muted);
+}
+
+/* ---------- Notions ---------- */
+.vnotions {
+  margin: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.vnotions__item {
+  display: grid;
+  grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+  gap: 1rem 2rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.vnotions__item dt {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.vnotions__item dt .mono {
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--blue);
+}
+
+.vnotions__item dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- Trois étapes ---------- */
+.vphases {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.vphases__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.8rem 1.6rem;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+/* flèche vers l'étape suivante */
+.vphases__item + .vphases__item::before {
+  content: '→';
+  position: absolute;
+  left: -2.15rem;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+/* l'étape actuelle est mise en avant */
+.vphases__item:last-child {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 6px 6px 0 var(--blue);
+}
+
+.vphases__item:last-child .vphases__text {
+  color: #c9d4ea;
+}
+
+.vphases__item:last-child .project__sub {
+  color: #6f93ff;
+}
+
+.vphases__label {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.vphases__item h3 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.vphases__text {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- Chronologie ---------- */
+.vfilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 2.4rem;
+}
+
+.vfilters button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.vfilters button span {
+  padding: 0 0.35rem;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 0.68rem;
+}
+
+.vfilters button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--blue);
+}
+
+.vfilters button[aria-pressed='true'] {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 3px 3px 0 var(--blue);
+}
+
+.vfilters button[aria-pressed='true'] span {
+  background: var(--blue);
+  color: #fff;
+}
+
+.vtimeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vtimeline__item {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  animation: fade-in 0.4s ease both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+}
+
+.vtimeline__date {
+  padding-top: 1.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.vtimeline__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 1.2rem 0 1.8rem 2rem;
+  border-left: 2px solid var(--line);
+}
+
+.vtimeline__body::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 1.55rem;
+  width: 12px;
+  height: 12px;
+  background: var(--ink);
+}
+
+.vtimeline__body h3 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.vtimeline__body > p:not(.vtag) {
+  max-width: 44rem;
+  color: var(--muted);
+}
+
+.vtimeline__src {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--blue);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.vtimeline__src:hover {
+  border-bottom-color: var(--blue);
+}
+
+.vtag {
+  padding: 0.12rem 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  border: 1.5px solid currentColor;
+}
+
+.vtag--detecter {
+  color: var(--blue);
+}
+
+.vtag--conseiller {
+  color: #fff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.vtag--loi {
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.vtag--marche {
+  color: var(--muted);
+}
+
+/* ---------- Cadre légal ---------- */
+.vlaws {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.vlaws__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.8rem 1.6rem;
+  border: 2px solid rgba(169, 184, 214, 0.45);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.vlaws__card:hover {
+  border-color: var(--blue);
+  box-shadow: 8px 8px 0 var(--blue);
+  transform: translate(-3px, -3px);
+}
+
+.vlaws__card h3 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.vlaws__status {
+  align-self: flex-start;
+  padding: 0.15rem 0.5rem;
+  background: var(--blue);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+}
+
+.vlaws__card > p:last-child {
+  color: #c9d4ea;
+  line-height: 1.7;
+}
+
+/* ---------- Avantages & limites ---------- */
+.vbalance {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.vbalance__col {
+  padding: 1.6rem 1.8rem;
+}
+
+.vbalance__col:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.vbalance__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 2px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.vbalance__head--pro {
+  color: var(--green);
+}
+
+.vbalance__head--con {
+  color: #c2410c;
+}
+
+.vbalance__col ul {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.vbalance__col li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.6;
+}
+
+.vbalance__col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--blue);
+}
+
+/* ---------- Mon analyse ---------- */
+.vanalysis {
+  display: grid;
+  gap: 1.6rem;
+  max-width: 52rem;
+}
+
+.vanalysis p {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+
+.vanalysis .mono {
+  padding-top: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* ---------- Sources ---------- */
+.vsources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.vsources a {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 0.4rem;
+  border-bottom: 1px dashed var(--line);
+  transition: background 0.2s, padding 0.2s;
+}
+
+.vsources a:hover {
+  padding-left: 0.9rem;
+  background: var(--blue-soft);
+}
+
+.vsources__site {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--blue);
+}
+
+.vsources__label {
+  font-weight: 600;
+}
+
+.vsources a svg {
+  color: var(--muted);
+}
+
+/* ---------- Adaptations ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .vconsole__pulse polyline {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .vtimeline__item {
+    animation: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .vphases,
+  .vlaws {
+    grid-template-columns: 1fr;
+  }
+  .vphases {
+    gap: 2.8rem;
+  }
+  .vphases__item + .vphases__item::before {
+    content: '↓';
+    left: 50%;
+    top: -2.5rem;
+    translate: -50% 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .vnotions__item,
+  .vbalance {
+    grid-template-columns: 1fr;
+  }
+  .vnotions__item {
+    gap: 0.4rem;
+  }
+  .vtimeline__item {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .vtimeline__date {
+    padding: 0 0 0 2rem;
+    border-left: 2px solid var(--line);
+    text-align: left;
+    color: var(--blue);
+  }
+  .vtimeline__body {
+    padding-top: 0.4rem;
+  }
+  .vtimeline__body::before {
+    top: -1.1rem;
+  }
+  .vsources a {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .vsources__site {
+    grid-column: 1 / -1;
+  }
+}

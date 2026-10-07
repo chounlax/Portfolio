@@ -1,0 +1,229 @@
+/* Mise en page commune aux pages secondaires (projet, veille...) — s'appuie sur index.css */
+/* Page dédiée au projet Wheello — s'appuie sur les variables et styles de index.css */
+
+/* ---------- Navigation ---------- */
+.pnav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem var(--side);
+  background: rgba(243, 246, 251, 0.97);
+  border-bottom: 2px solid var(--ink);
+}
+
+.pnav .nav__logo {
+  position: static;
+}
+
+.pnav__links {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.pnav__links a,
+.pnav__back {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.pnav__links a:hover {
+  color: var(--blue);
+}
+
+.pnav__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pnav__back:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--blue);
+}
+
+/* ---------- En-tête ---------- */
+.phero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(3.5rem, 8vw, 6rem) var(--side) clamp(4.5rem, 9vw, 7rem);
+  overflow: hidden;
+  color: #f3f6fb;
+  background-color: var(--night);
+  background-image:
+    linear-gradient(rgba(143, 180, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 180, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.phero__kicker,
+.pkicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
+.phero__kicker {
+  color: var(--blue-mist);
+}
+
+.phero__title {
+  margin: 1rem 0 1.2rem;
+  font-size: clamp(3.6rem, 11vw, 8.5rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.88;
+}
+
+.phero__title em {
+  font-style: normal;
+  color: var(--blue);
+}
+
+.phero__tagline {
+  max-width: 34rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.55;
+  color: #c9d4ea;
+}
+
+.phero__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 2rem 0 0;
+  border: 1.5px solid rgba(169, 184, 214, 0.35);
+}
+
+.phero__meta div {
+  padding: 0.8rem 1rem;
+  border: 0.75px solid rgba(169, 184, 214, 0.35);
+}
+
+.phero__meta dt {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: var(--blue-mist);
+}
+
+.phero__meta dd {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+}
+
+.phero__cta {
+  margin-top: 2rem;
+}
+
+.phero__cta .btn--light {
+  box-shadow: 6px 6px 0 var(--blue);
+}
+
+.phero__corner {
+  position: absolute;
+  left: var(--side);
+  bottom: 1.6rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: rgba(169, 184, 214, 0.6);
+}
+
+/* ---------- Titres de section ---------- */
+.ptitle .pkicker {
+  margin-bottom: 0.8rem;
+  color: var(--blue);
+}
+
+.ptitle .title {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* ---------- Ma contribution (bloc sombre) ---------- */
+.pdark {
+  margin-top: clamp(5rem, 11vw, 8.5rem);
+  padding-bottom: clamp(5rem, 10vw, 7rem);
+  color: #f3f6fb;
+  background-color: var(--night);
+  background-image:
+    linear-gradient(rgba(143, 180, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 180, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.pdark .title span,
+.pdark .pkicker {
+  color: #6f93ff;
+}
+
+/* ---------- Fin de page ---------- */
+.pout {
+  padding-bottom: clamp(5rem, 10vw, 7rem);
+}
+
+.pout__box {
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 2px solid var(--ink);
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.pout__box .pkicker {
+  color: #dbe5ff;
+}
+
+.pout__box h2 {
+  margin: 0.8rem 0 1.8rem;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.pout__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.pout__cta .btn--dark {
+  box-shadow: 6px 6px 0 #fff;
+}
+
+@media (max-width: 860px) {
+  .pnav__links {
+    display: none;
+  }
+  .phero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .phero__meta {
+    grid-template-columns: 1fr;
+  }
+  .phero__corner {
+    display: none;
+  }
+  .pout__cta .btn {
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@ import { Component, Suspense, lazy, useEffect, useRef, useState } from 'react'
 import Icon from './components/Icon.jsx'
 import Loader from './components/Loader.jsx'
 import Terminal from './components/Terminal.jsx'
+import { useReveal } from './hooks.js'
 import {
   profile,
   heroTags,
@@ -25,6 +26,7 @@ const links = [
   ['#projects', 'Projets'],
   ['#skills', 'Compétences'],
   ['#contact', 'Contact'],
+  ['./veille.html', 'Veille'],
 ]
 
 // ---------- Outils ----------
@@ -70,24 +72,6 @@ function introAlreadySeen() {
   } catch {
     return false
   }
-}
-
-// Fait apparaître les éléments .reveal quand ils entrent à l'écran
-function useReveal() {
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible')
-            io.unobserve(e.target)
-          }
-        }),
-      { threshold: 0.12 },
-    )
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
-    return () => io.disconnect()
-  }, [])
 }
 
 // Pendant le défilement, on suspend les effets de survol : sinon chaque carte

@@ -1,37 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import Gallery from '../components/Gallery.jsx'
+import PageNav, { PageTitle as Title } from '../components/PageNav.jsx'
+import { useReveal } from '../hooks.js'
 import { profile, wheello as w } from '../data.js'
-
-// Fait apparaître les éléments .reveal quand ils entrent à l'écran
-function useReveal() {
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible')
-            io.unobserve(e.target)
-          }
-        }),
-      { threshold: 0.12 },
-    )
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
-    return () => io.disconnect()
-  }, [])
-}
-
-function Title({ children, kicker }) {
-  return (
-    <div className="wtitle reveal">
-      <p className="wkicker">{kicker}</p>
-      <h2 className="title">
-        {children}
-        <span>.</span>
-      </h2>
-    </div>
-  )
-}
 
 // Cadre « navigateur » autour d'une capture du back-office
 function BrowserFrame({ image, onClick, label = 'wheello · back-office' }) {
@@ -57,25 +29,6 @@ function PhoneFrame({ image, onClick }) {
   )
 }
 
-function Nav() {
-  return (
-    <header className="wnav">
-      <a href="./" className="nav__logo" aria-label="Accueil du portfolio">
-        ST<span>.</span>
-      </a>
-      <nav className="wnav__links">
-        <a href="#besoin">Besoin</a>
-        <a href="#systeme">Système</a>
-        <a href="#interfaces">Interfaces</a>
-        <a href="#contribution">Ma contribution</a>
-      </nav>
-      <a href="./#projects" className="wnav__back">
-        <Icon name="arrowLeft" size={16} /> <span>Projets</span>
-      </a>
-    </header>
-  )
-}
-
 function Hero({ openGallery }) {
   const meta = [
     ['CLIENT', w.client],
@@ -84,17 +37,17 @@ function Hero({ openGallery }) {
     ['MON RÔLE', w.myRole],
   ]
   return (
-    <section className="whero">
-      <div className="whero__text">
-        <p className="whero__kicker">
+    <section className="phero">
+      <div className="phero__text">
+        <p className="phero__kicker">
           <span className="dot-green" /> PROJET 01 · {w.team.toUpperCase()}
         </p>
-        <h1 className="whero__title">
+        <h1 className="phero__title">
           {w.title.toUpperCase()}
           <em>.</em>
         </h1>
-        <p className="whero__tagline">{w.tagline}</p>
-        <dl className="whero__meta">
+        <p className="phero__tagline">{w.tagline}</p>
+        <dl className="phero__meta">
           {meta.map(([k, v]) => (
             <div key={k}>
               <dt>{k}</dt>
@@ -102,19 +55,19 @@ function Hero({ openGallery }) {
             </div>
           ))}
         </dl>
-        <div className="whero__cta">
+        <div className="phero__cta">
           <a className="btn btn--light" href="#systeme">
             Découvrir le système <Icon name="chevronDown" size={18} />
           </a>
         </div>
       </div>
 
-      <div className="whero__visual" aria-label="Aperçu du back-office et de l'application mobile">
+      <div className="phero__visual" aria-label="Aperçu du back-office et de l'application mobile">
         <BrowserFrame image={w.web.images[0]} onClick={() => openGallery(w.web, 0)} />
         <PhoneFrame image={w.mobile.images[0]} onClick={() => openGallery(w.mobile, 0)} />
       </div>
 
-      <p className="whero__corner" aria-hidden="true">
+      <p className="phero__corner" aria-hidden="true">
         symfony + flutter + api = wheello;
       </p>
     </section>
@@ -262,8 +215,8 @@ function Interfaces({ openGallery }) {
 
 function Contribution() {
   return (
-    <section id="contribution" className="wdark">
-      <div className="section wdark__inner">
+    <section id="contribution" className="pdark">
+      <div className="section pdark__inner">
         <Title kicker="// 04 — MON TRAVAIL">Ma contribution</Title>
         <div className="contrib">
           {w.contributions.map((c, i) => (
@@ -326,11 +279,11 @@ function Stack() {
 
 function Outro() {
   return (
-    <section className="section wout">
-      <div className="wout__box reveal">
-        <p className="wkicker">// FIN DU PROJET</p>
+    <section className="section pout">
+      <div className="pout__box reveal">
+        <p className="pkicker">// FIN DU PROJET</p>
         <h2>Envie d'en savoir plus sur ce projet ?</h2>
-        <div className="wout__cta">
+        <div className="pout__cta">
           <a className="btn btn--dark" href="./#contact">
             <Icon name="mail" size={18} /> Me contacter
           </a>
@@ -351,7 +304,14 @@ export default function Wheello() {
 
   return (
     <>
-      <Nav />
+      <PageNav
+        links={[
+          ['#besoin', 'Besoin'],
+          ['#systeme', 'Système'],
+          ['#interfaces', 'Interfaces'],
+          ['#contribution', 'Ma contribution'],
+        ]}
+      />
       <main>
         <Hero openGallery={openGallery} />
         <Need />

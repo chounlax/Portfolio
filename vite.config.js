@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         wheello: fileURLToPath(new URL('./wheello.html', import.meta.url)),
+        veille: fileURLToPath(new URL('./veille.html', import.meta.url)),
       },
     },
   },

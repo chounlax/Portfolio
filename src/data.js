@@ -173,6 +173,130 @@ export const wheello = {
   ],
 }
 
+// Contenu de la page de veille technologique (veille.html)
+// Pour ajouter une actualité : ajoute une ligne dans `timeline` (et sa source dans `sources`).
+export const veille = {
+  title: "L'IA au poignet",
+  subject: "L'évolution de l'intégration de l'IA pour les données de santé et les objets connectés sportifs",
+  question:
+    "Comment l'intelligence artificielle transforme-t-elle l'exploitation des données de santé collectées par les objets connectés sportifs, et quelles règles encadrent cette évolution ?",
+  updated: 'Octobre 2026',
+  period: '2018 → 2026',
+
+  // Comment je fais ma veille
+  method: [
+    { icon: 'globe', title: 'Sites spécialisés', text: "Presse tech et santé numérique (Wareable, MobiHealthNews, TechCrunch…) et sites officiels des fabricants." },
+    { icon: 'shield', title: 'Sources officielles', text: 'Textes européens (EUR-Lex), décisions de la FDA, publications de la CNIL et du Health Data Hub.' },
+    { icon: 'bell', title: 'Alertes', text: 'Alertes par mots-clés (« IA santé », « wearable », « AI Act ») pour être prévenu des nouveautés.' },
+  ],
+
+  // Les notions à connaître pour comprendre le sujet
+  notions: [
+    { term: 'Objet connecté sportif', text: 'Montre, bague ou bracelet qui mesure en continu le rythme cardiaque, le sommeil, l\'activité ou l\'oxygène dans le sang.' },
+    { term: 'Donnée de santé', text: 'Pour le RGPD, le rythme cardiaque ou le sommeil sont des données de santé : une catégorie sensible, protégée plus fortement.' },
+    { term: 'IA « qui détecte »', text: 'Un algorithme entraîné sur de nombreuses mesures repère un signe anormal (arythmie, apnée du sommeil, hypertension).' },
+    { term: 'IA « qui conseille »', text: 'Une IA générative (GPT, Gemini…) lit tes données et te répond en langage naturel, comme un coach.' },
+    { term: 'Dispositif médical', text: "Outil qui sert à diagnostiquer ou détecter une maladie. Il doit être autorisé (FDA aux États-Unis, marquage CE en Europe), contrairement à un simple outil « bien-être »." },
+  ],
+
+  // Les trois grandes étapes de l'évolution
+  phases: [
+    {
+      label: 'ÉTAPE 1',
+      title: 'Mesurer',
+      years: 'Années 2010',
+      text: "Les montres et bracelets comptent les pas, mesurent le cœur et le sommeil. L'utilisateur reçoit des chiffres et des graphiques, à lui de les interpréter.",
+    },
+    {
+      label: 'ÉTAPE 2',
+      title: 'Détecter',
+      years: '2018 → 2025',
+      text: "Des algorithmes d'apprentissage automatique repèrent des signes de maladie. Certaines fonctions sont autorisées comme dispositifs médicaux : ECG, apnée du sommeil, hypertension.",
+    },
+    {
+      label: 'ÉTAPE 3',
+      title: 'Conseiller',
+      years: '2023 → aujourd\'hui',
+      text: "Les IA génératives deviennent des coachs : on leur pose une question, elles lisent sommeil, récupération et entraînement, puis proposent un plan personnalisé.",
+    },
+  ],
+
+  // Chronologie des faits marquants (du plus ancien au plus récent)
+  timeline: [
+    { date: 'Sept. 2018', tag: 'DÉTECTER', title: "L'Apple Watch obtient l'autorisation de la FDA pour son ECG", text: "Première montre grand public autorisée à faire un électrocardiogramme : la montre de sport devient aussi un outil de santé.", source: 'medcity' },
+    { date: 'Janv. 2021', tag: 'MARCHÉ', title: 'Google finalise le rachat de Fitbit', text: "2,1 milliards de dollars : les géants du numérique veulent les données de santé et d'activité.", source: 'fitbit' },
+    { date: 'Sept. 2023', tag: 'CONSEILLER', title: 'Whoop lance « Whoop Coach », propulsé par GPT-4', text: "L'un des premiers coachs conversationnels branchés sur les données d'un bracelet sportif.", source: 'whoop' },
+    { date: 'Févr. 2024', tag: 'DÉTECTER', title: "La Galaxy Watch de Samsung détecte l'apnée du sommeil", text: "Première fonction de ce type autorisée par la FDA sur une montre connectée.", source: 'samsung' },
+    { date: 'Sept. 2024', tag: 'DÉTECTER', title: "Apple suit avec la détection de l'apnée du sommeil", text: "La fonction analyse les mouvements de respiration pendant la nuit grâce à l'accéléromètre.", source: 'apnee' },
+    { date: 'Mars 2025', tag: 'LOI', title: "L'Espace européen des données de santé entre en vigueur", text: "Le règlement (UE) 2025/327 donnera aux citoyens plus de contrôle sur leurs données de santé, avec une application par étapes à partir de 2027.", source: 'ehds' },
+    { date: 'Mars 2025', tag: 'CONSEILLER', title: 'Garmin lance Connect+ et ses conseils par IA', text: "L'IA devient une fonction payante : un abonnement mensuel pour obtenir des analyses personnalisées.", source: 'garmin' },
+    { date: 'Juil. 2025', tag: 'LOI', title: 'La FDA adresse un avertissement à Whoop', text: "Sa fonction d'estimation de la tension artérielle est jugée trop proche d'un dispositif médical non autorisé.", source: 'whoopfda' },
+    { date: 'Sept. 2025', tag: 'DÉTECTER', title: "L'Apple Watch alerte en cas de signes d'hypertension", text: "Un algorithme d'apprentissage automatique analyse le capteur cardiaque sur 30 jours, disponible dans plus de 150 pays.", source: 'hypertension' },
+    { date: 'Janv. 2026', tag: 'CONSEILLER', title: 'OpenAI annonce ChatGPT Health', text: "Un espace pour relier dossiers médicaux et applications comme Apple Health à ChatGPT. Il n'est pas ouvert dans l'Union européenne.", source: 'chatgpt' },
+    { date: 'Janv. 2026', tag: 'LOI', title: 'La FDA assouplit les règles pour les objets « bien-être »', text: "Une mesure de tension utilisée pour le bien-être ne fait plus automatiquement de l'objet un dispositif médical.", source: 'whoopfda' },
+    { date: 'Mai 2026', tag: 'CONSEILLER', title: "L'appli Fitbit devient Google Health, avec un coach Gemini", text: "Le coach lit les données de la montre, du sommeil ou d'une balance connectée et construit des plans personnalisés, sur abonnement.", source: 'google' },
+    { date: 'Juin 2026', tag: 'LOI', title: "La FDA clôt le dossier Whoop", text: "Après modification de la fonction, l'agence n'engage pas de poursuites : la frontière santé / bien-être se déplace.", source: 'whoopfda' },
+    { date: 'Juil. 2026', tag: 'LOI', title: "L'Europe reporte une partie de l'AI Act", text: "Le « Digital Omnibus » repousse à fin 2027 et 2028 les obligations des IA à haut risque, dont beaucoup d'outils de santé.", source: 'omnibus' },
+    { date: 'Juil. 2026', tag: 'CONSEILLER', title: 'ChatGPT Health ouvert à tous les adultes aux États-Unis', text: "Médicaments, analyses, sommeil, activité : l'IA compare les résultats et résume les changements.", source: 'chatgpt2' },
+  ],
+
+  // Le cadre légal en Europe
+  laws: [
+    {
+      name: 'RGPD',
+      status: 'En vigueur depuis 2018',
+      text: "Les données de santé (rythme cardiaque, sommeil, SpO₂…) sont une catégorie particulière : il faut un consentement explicite et une sécurité renforcée.",
+    },
+    {
+      name: 'AI Act',
+      status: 'Application progressive 2024 → 2028',
+      text: "Classe les IA selon leur niveau de risque. Les IA médicales sont souvent « à haut risque » : gestion des risques, qualité des données, contrôle humain. Ces obligations sont reportées à fin 2027 et 2028.",
+    },
+    {
+      name: 'EHDS',
+      status: 'En vigueur depuis 2025, appliqué à partir de 2027',
+      text: "L'Espace européen des données de santé facilite l'accès de chacun à ses données et leur réutilisation encadrée pour la recherche et l'entraînement d'IA.",
+    },
+  ],
+
+  pros: [
+    'Prévention : repérer tôt une arythmie, une apnée ou une hypertension',
+    'Suivi en continu, pas seulement lors d\'une visite chez le médecin',
+    'Conseils personnalisés pour l\'entraînement, la récupération et le sommeil',
+    'Données plus faciles à partager avec un professionnel de santé',
+  ],
+  cons: [
+    'Vie privée : des données très sensibles entre les mains de grandes entreprises',
+    'Fiabilité : une IA générative peut se tromper ou inquiéter à tort',
+    'Frontière floue entre conseil « bien-être » et diagnostic médical',
+    'Fonctions IA de plus en plus réservées aux abonnements payants',
+  ],
+
+  // Mon regard de développeur
+  analysis: [
+    "L'IA est passée en quelques années de « je mesure » à « je détecte » puis à « je te conseille ». La valeur n'est plus dans le capteur mais dans l'interprétation des données, d'où les abonnements et le rachat de Fitbit par Google.",
+    "L'Europe avance plus prudemment : ChatGPT Health n'y a pas été lancé et l'AI Act impose des règles fortes aux IA de santé, même si leur application a été repoussée. Les deux modèles, rapide aux États-Unis et encadré en Europe, cohabitent.",
+    "En tant que développeur, ce sujet rejoint ce que j'apprends en BTS SIO : une API sécurisée (comme le JWT de Wheello), le respect du RGPD dès la conception, et des données fiables, car une IA n'est jamais meilleure que les données qu'on lui donne.",
+  ],
+
+  sources: {
+    medcity: { label: "Apple gets first FDA clearance for retail ECG watch technology", site: 'MedCity News', date: '2018', url: 'https://medcitynews.com/2018/09/apples-gets-first-fda-clearance-for-retail-ecg-watch-technology/' },
+    fitbit: { label: 'Google Completes $2.1 Billion Acquisition of Fitbit', site: 'Cleary Gottlieb', date: '2021', url: 'https://www.clearygottlieb.com/news-and-insights/news-listing/google-completes-2-1-billion-acquisition-of-fitbit' },
+    whoop: { label: 'WHOOP unveils the new WHOOP Coach powered by OpenAI', site: 'WHOOP', date: '2023', url: 'https://www.whoop.com/us/en/press-center/whoop-unveils-the-new-whoop-coach-powered-by-openai/' },
+    samsung: { label: "Samsung's Sleep Apnea Feature on Galaxy Watch First of Its Kind Authorized by US FDA", site: 'Samsung Newsroom', date: '2024', url: 'https://news.samsung.com/global/samsungs-sleep-apnea-feature-on-galaxy-watch-first-of-its-kind-cleared-by-us-fda' },
+    apnee: { label: 'Apple Watch sleep apnea detection gets FDA approval', site: 'TechCrunch', date: '2024', url: 'https://techcrunch.com/2024/09/16/apple-watch-sleep-apnea-detection-gets-fda-approval' },
+    ehds: { label: "Publication du règlement sur l'Espace européen des données de santé (EHDS)", site: 'Health Data Hub', date: '2025', url: 'https://www.health-data-hub.fr/actualites/publication-reglement-sur-lespace-europeen-des-donnees-de-sante-ehds' },
+    garmin: { label: 'Garmin Connect gets a premium tier with AI insights', site: 'Wareable', date: '2025', url: 'https://www.wareable.com/garmin/garmin-connect-plus-announced-details-price' },
+    whoopfda: { label: 'FDA closes warning letter to Whoop over blood pressure feature', site: 'MassDevice', date: '2026', url: 'https://www.massdevice.com/fda-closes-warning-letter-whoop-blood-pressure/' },
+    hypertension: { label: 'Apple receives FDA nod for hypertension notification feature', site: 'MobiHealthNews', date: '2025', url: 'https://www.mobihealthnews.com/news/apple-receives-fda-nod-hypertension-notification-feature' },
+    chatgpt: { label: 'Introducing ChatGPT Health', site: 'OpenAI', date: '2026', url: 'https://openai.com/index/introducing-chatgpt-health/' },
+    google: { label: 'Google Health Coach : le rebranding de Fitbit et Gemini', site: 'WWWhat\'s new', date: '2026', url: 'https://wwwhatsnew.com/2026/05/10/google-health-coach-fitbit-app-rebrand-gemini-mayo-2026/' },
+    omnibus: { label: 'IA Act : le calendrier des obligations haut risque officiellement reporté', site: 'Quantic Avocats', date: '2026', url: 'https://www.quantic-avocats.com/2026/07/22/ai-act-digital-omnibus-report-obligations-haut-risque/' },
+    chatgpt2: { label: 'OpenAI relaunches Apple Health-connected ChatGPT feature with expanded access', site: '9to5Mac', date: '2026', url: 'https://9to5mac.com/2026/07/23/openai-relaunches-apple-health-connected-chatgpt-feature-with-expanded-access/' },
+    aiact: { label: 'AI Act : quels impacts pour la santé ?', site: 'Dastra', date: '2025', url: 'https://www.dastra.eu/fr/blog/ai-act-quels-impacts-pour-la-sante/60044' },
+  },
+}
+
 export const diplomas = [
   {
     title: 'BTS SIO — Services Informatiques aux Organisations',
