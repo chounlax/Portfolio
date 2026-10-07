@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -5,6 +6,15 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: './',
   plugins: [react()],
-  // three.js est volumineux par nature : on évite l'avertissement de taille
-  build: { chunkSizeWarningLimit: 1200 },
+  build: {
+    // three.js est volumineux par nature : on évite l'avertissement de taille
+    chunkSizeWarningLimit: 1200,
+    // une page HTML par entrée : l'accueil et les pages de projet
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        wheello: fileURLToPath(new URL('./wheello.html', import.meta.url)),
+      },
+    },
+  },
 })

@@ -408,12 +408,26 @@ function Projects() {
       <Title>Projets</Title>
       <div className="grid-3">
         {projects.map((p, i) => (
-          <article key={p.title} className="box project reveal">
+          <article key={p.title} className={`box project reveal ${p.page ? 'project--link' : ''}`}>
             <span className="project__num" aria-hidden="true">
               {String(i + 1).padStart(2, '0')}
             </span>
+            {p.cover && (
+              <div className="project__cover">
+                <img src={p.cover} alt={`Aperçu de ${p.title}`} loading="lazy" />
+              </div>
+            )}
             <p className="chip-small">{p.category}</p>
-            <h3>{p.title}</h3>
+            <h3>
+              {p.page ? (
+                // le lien couvre toute la carte (voir .project--link dans le CSS)
+                <a href={p.page} className="project__link">
+                  {p.title}
+                </a>
+              ) : (
+                p.title
+              )}
+            </h3>
             <p className="project__sub">{p.subtitle}</p>
             <p className="project__text">{p.text}</p>
             <ul className="tags tags--small">
@@ -421,6 +435,11 @@ function Projects() {
                 <li key={t}>{t}</li>
               ))}
             </ul>
+            {p.page && (
+              <p className="project__more" aria-hidden="true">
+                Voir le projet <Icon name="arrowRight" size={16} />
+              </p>
+            )}
           </article>
         ))}
         <div className="placeholder reveal">

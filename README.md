@@ -31,6 +31,9 @@ Le contenu du dossier `dist/` peut être déposé sur n'importe quel hébergeur 
 | Formes 3D en fil de fer de l'en-tête | `src/components/HeroScene.jsx` |
 | Icônes | `src/components/Icon.jsx` |
 | Structure des sections | `src/App.jsx` |
+| Page du projet Wheello : textes | `src/data.js` (objet `wheello`) |
+| Page du projet Wheello : mise en page | `src/pages/Wheello.jsx` / `src/wheello.css` |
+| Captures de Wheello | `public/projects/wheello/` |
 
 L'écran d'introduction ne s'affiche qu'une fois par visite. Pour le revoir, ferme l'onglet et rouvre le site.
 

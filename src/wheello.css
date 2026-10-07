@@ -1,0 +1,818 @@
+/* Page dédiée au projet Wheello — s'appuie sur les variables et styles de index.css */
+
+/* ---------- Navigation ---------- */
+.wnav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem var(--side);
+  background: rgba(243, 246, 251, 0.97);
+  border-bottom: 2px solid var(--ink);
+}
+
+.wnav .nav__logo {
+  position: static;
+}
+
+.wnav__links {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.wnav__links a,
+.wnav__back {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.wnav__links a:hover {
+  color: var(--blue);
+}
+
+.wnav__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wnav__back:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--blue);
+}
+
+/* ---------- En-tête ---------- */
+.whero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(3.5rem, 8vw, 6rem) var(--side) clamp(4.5rem, 9vw, 7rem);
+  overflow: hidden;
+  color: #f3f6fb;
+  background-color: var(--night);
+  background-image:
+    linear-gradient(rgba(143, 180, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 180, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.whero__kicker,
+.wkicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
+.whero__kicker {
+  color: var(--blue-mist);
+}
+
+.whero__title {
+  margin: 1rem 0 1.2rem;
+  font-size: clamp(3.6rem, 11vw, 8.5rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.88;
+}
+
+.whero__title em {
+  font-style: normal;
+  color: var(--blue);
+}
+
+.whero__tagline {
+  max-width: 34rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.55;
+  color: #c9d4ea;
+}
+
+.whero__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 2rem 0 0;
+  border: 1.5px solid rgba(169, 184, 214, 0.35);
+}
+
+.whero__meta div {
+  padding: 0.8rem 1rem;
+  border: 0.75px solid rgba(169, 184, 214, 0.35);
+}
+
+.whero__meta dt {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: var(--blue-mist);
+}
+
+.whero__meta dd {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+}
+
+.whero__cta {
+  margin-top: 2rem;
+}
+
+.whero__cta .btn--light {
+  box-shadow: 6px 6px 0 var(--blue);
+}
+
+.whero__visual {
+  position: relative;
+  padding: 0 4.5rem 3rem 0;
+}
+
+.whero__visual .frame-browser {
+  box-shadow: 10px 10px 0 var(--blue);
+}
+
+.whero__visual .frame-phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: clamp(110px, 24%, 170px);
+}
+
+.whero__corner {
+  position: absolute;
+  left: var(--side);
+  bottom: 1.6rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: rgba(169, 184, 214, 0.6);
+}
+
+/* ---------- Cadres de captures ---------- */
+.frame-browser,
+.frame-phone {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  cursor: zoom-in;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.frame-browser {
+  border: 2px solid var(--ink);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.frame-browser:hover,
+.frame-phone:hover {
+  transform: translate(-3px, -3px);
+}
+
+.frame-browser:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.frame-browser__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.7rem;
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper-2);
+}
+
+.frame-browser__bar i {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid var(--ink);
+}
+
+.frame-browser__bar i:first-child {
+  background: var(--blue);
+}
+
+.frame-browser__bar span {
+  margin-left: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.frame-browser img {
+  width: 100%;
+  aspect-ratio: 16 / 9.1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.frame-phone {
+  padding: 6px;
+  border: 2px solid var(--ink);
+  border-radius: 26px;
+  background: var(--ink);
+  box-shadow: 6px 6px 0 var(--blue);
+}
+
+.frame-phone:hover {
+  box-shadow: 9px 9px 0 var(--blue);
+}
+
+.frame-phone img {
+  width: 100%;
+  aspect-ratio: 9 / 20;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ---------- Titres de section ---------- */
+.wtitle .wkicker {
+  margin-bottom: 0.8rem;
+  color: var(--blue);
+}
+
+.wtitle .title {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* ---------- Le besoin ---------- */
+.need {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.need__text {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.need__figures {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.need__figures .stat {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.need__figures .stat strong {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+/* ---------- Architecture ---------- */
+.arch__intro {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+
+.arch {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px minmax(0, 1.15fr) 110px minmax(0, 1fr);
+  align-items: center;
+}
+
+.arch__node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 1.4rem;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.arch__node h3 {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.arch__node .mono {
+  font-size: 0.75rem;
+  color: var(--blue);
+}
+
+.arch__who {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.arch__node .tags {
+  margin-top: 0.5rem;
+}
+
+.arch__node--mine {
+  border-color: var(--blue);
+  box-shadow: 6px 6px 0 var(--blue);
+  outline: 2px dashed var(--blue);
+  outline-offset: 6px;
+}
+
+.arch__node--mine > svg {
+  color: var(--blue);
+}
+
+.arch__badge {
+  position: absolute;
+  top: -0.8rem;
+  right: 0.8rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.arch__server {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.1rem;
+  border: 2px dashed var(--ink-2);
+  background: var(--paper-2);
+}
+
+.arch__server-name {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--ink-2);
+}
+
+.arch__node--small {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.arch__node--small h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+/* Liaison entre deux briques : un trait avec un « paquet » de données qui circule */
+.arch__wire {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  height: 100%;
+  min-height: 90px;
+  justify-content: center;
+}
+
+.arch__wire::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 2px dashed var(--ink);
+}
+
+.arch__wire--mine::before {
+  border-top-color: var(--blue);
+}
+
+.arch__label {
+  position: relative;
+  padding: 0 0.3rem;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+
+.arch__packet {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--ink);
+  animation: packet-x 2.6s ease-in-out infinite alternate;
+}
+
+.arch__wire--mine .arch__packet {
+  background: var(--blue);
+}
+
+@keyframes packet-x {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 10px);
+  }
+}
+
+@keyframes packet-y {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 10px);
+  }
+}
+
+.arch__legend {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 2.2rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.arch__legend-box {
+  width: 16px;
+  height: 16px;
+  border: 2px dashed var(--blue);
+}
+
+/* ---------- Interfaces ---------- */
+.show {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.5fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.show + .show {
+  margin-top: clamp(4rem, 9vw, 6.5rem);
+}
+
+/* l'application mobile : texte à droite pour alterner */
+.show--mobile .show__text {
+  order: 2;
+}
+
+.show__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.show__text h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.show__points {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.6rem;
+}
+
+.show__points li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+}
+
+.show__shots--web {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+/* première capture en grand, les deux autres en dessous */
+.show__shots--web .frame-browser:first-child {
+  grid-column: 1 / -1;
+}
+
+.show__shots--mobile {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 2.5vw, 1.6rem);
+  align-items: start;
+}
+
+/* léger décalage vertical pour donner du rythme */
+.show__shots--mobile figure {
+  margin: 0;
+}
+
+.show__shots--mobile figure:nth-child(2) {
+  margin-top: 2.5rem;
+}
+
+.show__shots--mobile figcaption {
+  margin-top: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--muted);
+}
+
+.show__hint {
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---------- Ma contribution (bloc sombre) ---------- */
+.wdark {
+  margin-top: clamp(5rem, 11vw, 8.5rem);
+  padding-bottom: clamp(5rem, 10vw, 7rem);
+  color: #f3f6fb;
+  background-color: var(--night);
+  background-image:
+    linear-gradient(rgba(143, 180, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 180, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.wdark .title span,
+.wdark .wkicker {
+  color: #6f93ff;
+}
+
+.contrib {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.contrib__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.8rem 1.6rem;
+  overflow: hidden;
+  border: 2px solid rgba(169, 184, 214, 0.45);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.contrib__card:hover {
+  border-color: var(--blue);
+  box-shadow: 8px 8px 0 var(--blue);
+  transform: translate(-3px, -3px);
+}
+
+.contrib__num {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  color: rgba(143, 180, 255, 0.12);
+}
+
+.contrib__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 4px 4px 0 #f3f6fb;
+}
+
+.contrib__card h3 {
+  margin-top: 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.contrib__card > p {
+  color: #c9d4ea;
+  line-height: 1.7;
+}
+
+/* petite chaîne d'étapes façon pipeline */
+.contrib__steps {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: auto 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px dashed rgba(169, 184, 214, 0.35);
+}
+
+.contrib__steps li {
+  padding: 0.2rem 0.5rem;
+  border: 1.5px solid rgba(169, 184, 214, 0.45);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+  color: #e4ebf8;
+}
+
+.contrib__steps li + li::before {
+  content: '→';
+  margin-right: 0.4rem;
+  margin-left: -0.15rem;
+  color: #6f93ff;
+}
+
+.contrib__steps li:last-child {
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+/* ---------- Fonctionnalités ---------- */
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.6rem;
+}
+
+.feature svg {
+  color: var(--blue);
+}
+
+.feature h3 {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.feature p {
+  color: var(--muted);
+}
+
+/* ---------- Stack ---------- */
+.wstack {
+  padding: 0.6rem 1.8rem;
+}
+
+.wstack:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.wstack__row {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0;
+}
+
+.wstack__row + .wstack__row {
+  border-top: 1px dashed var(--line);
+}
+
+.wstack__row .mono {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--blue);
+}
+
+/* ---------- Fin de page ---------- */
+.wout {
+  padding-bottom: clamp(5rem, 10vw, 7rem);
+}
+
+.wout__box {
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 2px solid var(--ink);
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.wout__box .wkicker {
+  color: #dbe5ff;
+}
+
+.wout__box h2 {
+  margin: 0.8rem 0 1.8rem;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.wout__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.wout__cta .btn--dark {
+  box-shadow: 6px 6px 0 #fff;
+}
+
+/* ---------- Adaptations ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .arch__packet {
+    animation: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .arch {
+    grid-template-columns: minmax(0, 1fr) 100px minmax(0, 1.15fr) 80px minmax(0, 1fr);
+  }
+  .contrib {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .wnav__links {
+    display: none;
+  }
+  .whero,
+  .need,
+  .show {
+    grid-template-columns: 1fr;
+  }
+  .whero__visual {
+    padding-right: 3rem;
+  }
+  .show--mobile .show__text {
+    order: 0;
+  }
+  /* le schéma passe à la verticale */
+  .arch {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+  .arch__wire {
+    flex-direction: row;
+    gap: 1rem;
+    min-height: 0;
+    height: 80px;
+  }
+  .arch__wire::before {
+    left: 50%;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 2px dashed var(--ink);
+  }
+  .arch__wire--mine::before {
+    border-left-color: var(--blue);
+  }
+  .arch__label {
+    background: var(--paper);
+  }
+  .arch__packet {
+    top: 0;
+    left: calc(50% - 4px);
+    animation-name: packet-y;
+  }
+}
+
+@media (max-width: 560px) {
+  .whero__meta {
+    grid-template-columns: 1fr;
+  }
+  .whero__corner {
+    display: none;
+  }
+  .show__shots--web {
+    grid-template-columns: 1fr;
+  }
+  .wstack__row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  .wout__cta .btn {
+    width: 100%;
+  }
+}

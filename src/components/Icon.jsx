@@ -76,6 +76,37 @@ const paths = {
   close: <path d="M18 6 6 18M6 6l12 12" />,
   cube: <path d="M21 16V8l-9-5-9 5v8l9 5zM3.3 7 12 12l8.7-5M12 22V12" />,
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
+  arrowLeft: <path d="M19 12H5M12 19l-7-7 7-7" />,
+  arrowRight: <path d="M5 12h14M12 5l7 7-7 7" />,
+  lock: (
+    <>
+      <rect x="4" y="11" width="16" height="10" rx="2" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </>
+  ),
+  calendar: (
+    <>
+      <rect x="3" y="4" width="18" height="18" rx="2" />
+      <path d="M16 2v4M8 2v4M3 10h18" />
+    </>
+  ),
+  car: (
+    <>
+      <path d="M5 17H3v-5l2-5h14l2 5v5h-2M5 12h14" />
+      <circle cx="7.5" cy="17" r="2" />
+      <circle cx="16.5" cy="17" r="2" />
+    </>
+  ),
+  alert: <path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />,
+  chart: <path d="M3 3v18h18M7 15l4-4 3 3 6-6" />,
+  bell: <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0" />,
+  shield: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
+  users: (
+    <>
+      <circle cx="9" cy="7" r="4" />
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+    </>
+  ),
 }
 
 export default function Icon({ name, size = 20, ...props }) {

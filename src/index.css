@@ -885,6 +885,146 @@ ul {
   margin-top: 0.4rem;
 }
 
+/* Image de couverture en haut de la carte */
+.project__cover {
+  position: relative;
+  margin: -1.8rem -1.6rem 0.6rem;
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper-2);
+  overflow: hidden;
+}
+
+.project__cover img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Carte qui mène à une page dédiée : le lien du titre couvre toute la carte */
+.project__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.project--link:hover .project__cover img {
+  transform: scale(1.04);
+}
+
+.project--link:hover h3 {
+  color: var(--blue);
+}
+
+.project__more {
+  position: relative;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--blue);
+  transition: background 0.2s, gap 0.2s;
+}
+
+.project--link:hover .project__more {
+  background: var(--blue);
+  gap: 0.8rem;
+}
+
+/* ---------- Galerie plein écran ---------- */
+.gallery {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgb(10 20 40 / 0.92);
+}
+
+.gallery__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  max-width: min(1100px, 100%);
+}
+
+.gallery__img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 8rem);
+  max-height: calc(100dvh - 8rem);
+  object-fit: contain;
+  border: 2px solid #fff;
+  background: #fff;
+}
+
+.gallery__close {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.6rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.gallery__bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  color: #f3f6fb;
+}
+
+.gallery__bar p {
+  flex: 1;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.gallery__bar span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--blue-mist);
+}
+
+.gallery__bar button {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.gallery__bar button:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
 .placeholder {
   min-height: 220px;
   display: flex;
