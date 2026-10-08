@@ -1,4 +1,6 @@
-# Construit le portfolio et le publie sur GitHub Pages à chaque push sur main
+# Génère le portfolio avec Symfony et le publie sur GitHub Pages à chaque push sur main.
+# GitHub Pages ne sait pas exécuter PHP : Symfony produit les pages en HTML statique
+# (commande app:export-static) et c'est ce résultat qui est mis en ligne.
 name: Déploiement GitHub Pages
 
 on:
@@ -19,14 +21,30 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      APP_ENV: prod
     steps:
       - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+
+      - run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run build
+
+      # donne le sous-dossier du site (ex. /Portfolio)
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - run: php bin/console app:export-static --base="${{ steps.pages.outputs.base_path }}"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

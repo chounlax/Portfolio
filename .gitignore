@@ -1,3 +1,20 @@
-node_modules
-dist
-*.log
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> front (React + Vite) ###
+/node_modules/
+/public/build/
+###< front (React + Vite) ###
+
+###> export statique (GitHub Pages) ###
+/dist/
+.DS_Store
+###< export statique (GitHub Pages) ###
