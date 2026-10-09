@@ -231,9 +231,7 @@ function Hero() {
           <a className="icon-btn" href={`mailto:${profile.email}`} aria-label="Envoyer un e-mail">
             <Icon name="mail" />
           </a>
-          <a className="icon-btn" href={profile.phoneHref} aria-label="Appeler">
-            <Icon name="phone" />
-          </a>
+          
           <a className="icon-btn" href="#contact" aria-label="Localisation">
             <Icon name="pin" />
           </a>
@@ -513,17 +511,7 @@ function Contact() {
               <Icon name={copied ? 'check' : 'copy'} size={18} />
             </button>
           </div>
-          <div className="info-card">
-            <span className="info-card__icon">
-              <Icon name="phone" />
-            </span>
-            <div>
-              <p className="info-card__label">TÉLÉPHONE</p>
-              <a className="mono" href={profile.phoneHref}>
-                {profile.phone}
-              </a>
-            </div>
-          </div>
+          
           <div className="info-card">
             <span className="info-card__icon">
               <Icon name="globe" />
@@ -590,7 +578,6 @@ function Marquee() {
 function Finale() {
   const cards = [
     { icon: 'mail', label: 'E-MAIL', href: `mailto:${profile.email}` },
-    { icon: 'phone', label: 'TÉLÉPHONE', href: profile.phoneHref },
     { icon: 'file', label: 'MON CV', href: profile.cv, external: true },
     { icon: 'arrowUp', label: 'HAUT DE PAGE', href: '#top' },
   ]
