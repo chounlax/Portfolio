@@ -254,7 +254,7 @@ function Hero() {
       <p className="hero__corner hero__corner--bl">{profile.location.toUpperCase()}</p>
       <div className="hero__corner hero__corner--br" aria-hidden="true">
         <p>const formation = "BTS SIO";</p>
-        <p>const stage = "1 à 3 mois";</p>
+        <p>const stage = "6 semaines";</p>
         <p>const motivation = Infinity;</p>
       </div>
       <a href="#about" className="hero__down" aria-label="Défiler vers le bas">
@@ -496,7 +496,7 @@ function Contact() {
       <div className="contact">
         <div className="contact__info reveal">
           <p className="body-text">
-            Je recherche un stage de 1 à 3 mois. Une question, une proposition ou simplement envie d'échanger ?
+            Je recherche un stage de 6 semaines du 4 janvier au 13 février. Une question, une proposition ou simplement envie d'échanger ?
             Écrivez-moi, je vous répondrai rapidement.
           </p>
           <div className="info-card">
