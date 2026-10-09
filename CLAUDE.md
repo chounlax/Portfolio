@@ -15,7 +15,7 @@ Pas de base de données pour l'instant.
 
 ## Organisation
 
-- `src/Controller/PortfolioController.php` : routes `/` (home), `/wheello`, `/veille`
+- `src/Controller/PortfolioController.php` : routes `/` (home), `/wheello`, `/veille`, `/entreprise` (page de services d'auto-entrepreneur, volontairement reliée à aucun bouton du site et non indexée)
 - `templates/base.html.twig` : squelette commun ; chaque page de `templates/portfolio/` choisit son entrée Vite avec `{% set entry = '...' %}`
 - `src/Command/ExportStaticCommand.php` : export statique pour GitHub Pages (`.github/workflows/deploy.yml`) ; toute nouvelle route doit aussi être ajoutée dans sa constante `PAGES`
 - `src/Twig/ViteExtension.php` : fonctions Twig `vite_entry_link_tags()` / `vite_entry_script_tags()` qui lisent `public/build/.vite/manifest.json`

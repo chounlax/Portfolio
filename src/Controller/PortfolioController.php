@@ -25,4 +25,12 @@ class PortfolioController extends AbstractController
     {
         return $this->render('portfolio/veille.html.twig');
     }
+
+    // Page de mes services d'auto-entrepreneur : aucun bouton du site n'y mène,
+    // on y accède seulement en tapant son adresse.
+    #[Route('/entreprise', name: 'entreprise')]
+    public function entreprise(): Response
+    {
+        return $this->render('portfolio/entreprise.html.twig');
+    }
 }

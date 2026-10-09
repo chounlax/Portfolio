@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% set entry = 'entreprise' %}
+
+{# Page cachée : on demande aux moteurs de recherche de ne pas l'afficher #}
+{% block meta %}<meta name="robots" content="noindex, nofollow">{% endblock %}
+
+{% block title %}Services web & mobile — Sean Thompson{% endblock %}
+{% block description %}Sean Thompson, développeur web et mobile auto-entrepreneur : sites vitrines, applications web sur mesure, applications mobiles et maintenance.{% endblock %}
