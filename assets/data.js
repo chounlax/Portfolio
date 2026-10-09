@@ -64,10 +64,10 @@ export const experiences = [
   {
     date: '2024',
     company: 'Groupe scolaire Curie — Marles-les-Mines',
-    title: 'Stage en école primaire',
+    title: "Stage d'observation en école primaire",
     tasks: [
-      "Aide à l'apprentissage et à l'utilisation d'outils informatiques par les élèves",
-      "Participation à l'organisation d'activités pédagogiques",
+      "Observation de la méthodologie de l'enseignant en classe",
+      "Découverte du métier d'enseignant et du fonctionnement d'une école",
     ],
   },
 ]
