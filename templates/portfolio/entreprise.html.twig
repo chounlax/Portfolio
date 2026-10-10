@@ -5,5 +5,14 @@
 {# Page cachée : on demande aux moteurs de recherche de ne pas l'afficher #}
 {% block meta %}<meta name="robots" content="noindex, nofollow">{% endblock %}
 
-{% block title %}Services web & mobile — Sean Thompson{% endblock %}
-{% block description %}Sean Thompson, développeur web et mobile auto-entrepreneur : sites vitrines, applications web sur mesure, applications mobiles et maintenance.{% endblock %}
+{# Titre et description traduits (translations/entreprise.fr.yaml / .en.yaml) #}
+{% block title %}{{ 'meta.title'|trans({}, 'entreprise') }}{% endblock %}
+{% block description %}{{ 'meta.description'|trans({}, 'entreprise') }}{% endblock %}
+
+{# Textes de la page + adresses des deux versions (pour le bouton FR / EN) #}
+{% block root_data %}
+             data-lang="{{ app.request.locale }}"
+             data-url-fr="{{ path('entreprise', {_locale: 'fr'}) }}"
+             data-url-en="{{ path('entreprise', {_locale: 'en'}) }}"
+             data-texts="{{ texts|json_encode }}"
+{% endblock %}

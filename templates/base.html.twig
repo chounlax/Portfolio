@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{{ app.request.locale }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
              data-home="{{ path('home') }}"
              data-wheello="{{ path('wheello') }}"
              data-veille="{{ path('veille') }}"
-             data-base="{{ app.request.basePath }}"></div>
+             data-base="{{ app.request.basePath }}"
+             {% block root_data %}{% endblock %}></div>
     </body>
 </html>

@@ -9,6 +9,39 @@
   overflow-wrap: anywhere;
 }
 
+/* ---------- Bouton de langue FR / EN ---------- */
+.ehero__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem 1.5rem;
+}
+
+.elang {
+  display: inline-flex;
+  border: 1.5px solid rgba(169, 184, 214, 0.45);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.elang a {
+  padding: 0.35rem 0.7rem;
+  color: var(--blue-mist);
+  transition: color 0.2s, background 0.2s;
+}
+
+.elang a:hover {
+  color: #fff;
+}
+
+.elang a.is-active {
+  background: var(--blue);
+  color: #fff;
+}
+
 /* ---------- Terminal décoratif de l'en-tête ---------- */
 .eterm {
   border: 2px solid rgba(169, 184, 214, 0.45);
