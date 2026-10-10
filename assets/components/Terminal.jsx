@@ -20,7 +20,7 @@ const commands = {
   experience: () => experiences.map((e) => `[${e.date}] ${e.title} — ${e.company}`),
   projets: () => projects.map((p, i) => `${String(i + 1).padStart(2, '0')}. ${p.title} — ${p.subtitle}`),
   competences: () => skillGroups.map((g) => `${g.title.padEnd(18)} ${g.items.join(', ')}`),
-  contact: () => [`e-mail    ${profile.email}`, `téléphone ${profile.phone}`, `lieu      ${profile.location}`],
+  contact: () => [`e-mail    ${profile.email}`, `lieu      ${profile.location}`],
   cv: () => {
     window.open(profile.cv, '_blank', 'noopener')
     return ['Ouverture du CV dans un nouvel onglet…']

@@ -16,8 +16,6 @@ export const profile = {
   ],
   photo: asset('portrait.png'),
   cv: asset('cv-sean-thompson.pdf'),
-  phone: '[numéro retiré]',
-  phoneHref: 'tel:[numéro retiré]',
   email: 'sd.thompson80200@gmail.com',
   location: 'Achicourt, France',
 }
