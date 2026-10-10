@@ -331,6 +331,3 @@ export const marquee = [
   'SQL',
   'À LA RECHERCHE DE MON PROCHAIN STAGE',
 ]
-
-// Les textes de la page /entreprise ne sont pas ici : ils sont traduits par Symfony
-// dans translations/entreprise.fr.yaml (français) et translations/entreprise.en.yaml (anglais).

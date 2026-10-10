@@ -24,8 +24,6 @@ class ExportStaticCommand
         '/' => 'index.html',
         '/wheello' => 'wheello/index.html',
         '/veille' => 'veille/index.html',
-        '/entreprise' => 'entreprise/index.html',
-        '/en/entreprise' => 'en/entreprise/index.html',
     ];
 
     public function __construct(

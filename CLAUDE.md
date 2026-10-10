@@ -15,12 +15,11 @@ Pas de base de données pour l'instant.
 
 ## Organisation
 
-- `src/Controller/PortfolioController.php` : routes `/` (home), `/wheello`, `/veille`, `/entreprise` + `/en/entreprise` (page de services d'auto-entrepreneur bilingue, volontairement reliée à aucun bouton du site et non indexée)
+- `src/Controller/PortfolioController.php` : routes `/` (home), `/wheello`, `/veille`
 - `templates/base.html.twig` : squelette commun ; chaque page de `templates/portfolio/` choisit son entrée Vite avec `{% set entry = '...' %}`
 - `src/Command/ExportStaticCommand.php` : export statique pour GitHub Pages (`.github/workflows/deploy.yml`) ; toute nouvelle route doit aussi être ajoutée dans sa constante `PAGES`
 - `src/Twig/ViteExtension.php` : fonctions Twig `vite_entry_link_tags()` / `vite_entry_script_tags()` qui lisent `public/build/.vite/manifest.json`
-- `assets/data.js` : tous les textes du portfolio, sauf la page entreprise
-- `translations/entreprise.fr.yaml` / `entreprise.en.yaml` : textes de la page entreprise (mêmes clés dans les deux fichiers) ; le contrôleur les envoie au React via `data-texts`
+- `assets/data.js` : tous les textes du portfolio
 - `assets/urls.js` : adresses transmises par Twig (attributs `data-*` de `#root`)
 - `public/` : photo, CV, captures de projets
 
