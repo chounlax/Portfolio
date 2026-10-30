@@ -123,7 +123,6 @@ function Architecture() {
           <p className="arch__who">Salariés sur le terrain</p>
           <ul className="tags tags--small">
             <li>Tests unitaires</li>
-            <li>Golden tests</li>
           </ul>
         </div>
 

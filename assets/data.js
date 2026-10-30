@@ -142,9 +142,9 @@ export const wheello = {
     },
     {
       icon: 'check',
-      title: 'Tests unitaires & golden tests',
-      text: "J'ai écrit des tests pour l'application Flutter. Les tests unitaires vérifient la logique de l'application. Les golden tests comparent le rendu d'un écran à une image de référence : si l'affichage change sans le vouloir, le test échoue.",
-      steps: ['Rendu actuel', 'Image de référence', 'Comparaison', 'OK / ÉCHEC'],
+      title: 'Tests unitaires',
+      text: "J'ai écrit des tests unitaires pour l'application Flutter : chaque test appelle une partie de la logique avec des données connues et vérifie que le résultat obtenu est bien celui attendu.",
+      steps: ['Données de test', 'Appel de la fonction', 'Résultat attendu', 'OK / ÉCHEC'],
     },
     {
       icon: 'wifi',
@@ -169,7 +169,7 @@ export const wheello = {
     { title: 'Mobile', items: ['Flutter', 'Dart'] },
     { title: 'Sécurité', items: ['API REST', 'JWT', 'Rôles'] },
     { title: 'Données & outils', items: ['MySQL', 'Docker', 'Git'] },
-    { title: 'Qualité', items: ['Tests unitaires', 'Golden tests', 'PHPUnit'] },
+    { title: 'Qualité', items: ['Tests unitaires', 'PHPUnit'] },
   ],
 }
 
