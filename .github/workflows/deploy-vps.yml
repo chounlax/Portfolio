@@ -1,0 +1,71 @@
+# Déploie le portfolio sur le VPS RedHeberg à chaque push sur main.
+# Contrairement à GitHub Pages, le VPS sait exécuter PHP : on envoie le vrai projet Symfony
+# (code + vendor/ + public/build/), Nginx et PHP-FPM le font tourner sur le serveur.
+#
+# Secrets à créer dans GitHub (Settings > Secrets and variables > Actions) :
+#   VPS_HOST    : adresse IP du VPS
+#   VPS_USER    : utilisateur qui déploie (deploy, jamais root)
+#   VPS_SSH_KEY : clé privée de déploiement (contenu de ~/.ssh/deploy_portfolio)
+name: Déploiement VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permet aussi de lancer le déploiement à la main depuis l'onglet Actions
+
+# un seul déploiement à la fois
+concurrency:
+  group: vps
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: prod
+    steps:
+      - uses: actions/checkout@v4
+
+      # même version de PHP que sur le serveur (Debian 13)
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+
+      # dépendances PHP sans les outils de développement
+      - run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+      # compile le React dans public/build/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      # donne à GitHub la clé privée de déploiement et l'empreinte du serveur
+      - name: Préparer la connexion SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      # copie le projet sur le serveur ; --delete retire les fichiers supprimés du dépôt
+      # les fichiers exclus (var/, .env.local du serveur) ne sont ni envoyés ni effacés
+      - name: Envoyer les fichiers sur le VPS
+        run: |
+          rsync -az --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='node_modules/' \
+            --exclude='var/' \
+            --exclude='.env.local' \
+            --exclude='.env.*.local' \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/portfolio/
+
+      # vide le cache de Symfony pour que la nouvelle version soit prise en compte
+      - name: Vider le cache Symfony
+        run: |
+          ssh -i ~/.ssh/deploy_key ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+            "cd /var/www/portfolio && php bin/console cache:clear --no-warmup && php bin/console cache:warmup"
