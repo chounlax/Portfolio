@@ -105,7 +105,7 @@ function Need() {
   )
 }
 
-function Architecture() {
+function Architecture({ openGallery }) {
   return (
     <section id="systeme" className="section">
       <Title kicker="// 02 — ARCHITECTURE">Le système</Title>
@@ -166,6 +166,20 @@ function Architecture() {
       <p className="arch__legend reveal">
         <span className="arch__legend-box" /> En bleu : ce sur quoi j'ai travaillé côté application.
       </p>
+
+      {/* MCD : comment la base de données est organisée */}
+      <div className="mcd reveal">
+        <div className="mcd__text">
+          <p className="chip-small">BASE DE DONNÉES</p>
+          <h3>{w.mcd.title}</h3>
+          <p className="body-text">{w.mcd.text}</p>
+        </div>
+        <BrowserFrame
+          image={w.mcd.image}
+          label="wheello · mcd"
+          onClick={() => openGallery({ title: w.mcd.title, images: [w.mcd.image] }, 0)}
+        />
+      </div>
     </section>
   )
 }
@@ -315,7 +329,7 @@ export default function Wheello() {
       <main>
         <Hero openGallery={openGallery} />
         <Need />
-        <Architecture />
+        <Architecture openGallery={openGallery} />
         <Interfaces openGallery={openGallery} />
         <Contribution />
         <Features />

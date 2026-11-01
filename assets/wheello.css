@@ -304,6 +304,36 @@
   border: 2px dashed var(--blue);
 }
 
+/* MCD sous le schéma d'architecture */
+.mcd {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.mcd__text h3 {
+  margin: 0.6rem 0 0.8rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* le MCD est affiché en entier (pas recadré comme les captures) sur fond blanc */
+.mcd .frame-browser img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .mcd {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Interfaces ---------- */
 .show {
   display: grid;

@@ -106,6 +106,13 @@ export const wheello = {
     "Notre équipe a conçu Wheello de A à Z : une interface d'administration web pour les responsables, une application mobile pour les salariés sur le terrain, et une API qui fait communiquer les deux.",
   ],
 
+  // MCD (modèle conceptuel des données) affiché dans la section « Le système »
+  mcd: {
+    title: 'Le modèle de données',
+    text: "Avant de coder, nous avons conçu le MCD de la base : les entités (utilisateur, véhicule, réservation, constat, signalement…), leurs attributs et les associations qui les relient, avec leurs cardinalités.",
+    image: { src: asset('projects/wheello/habitat-5.png'), caption: 'MCD de la base de données Wheello' },
+  },
+
   // Les deux interfaces du système
   web: {
     title: 'Le back-office web',
