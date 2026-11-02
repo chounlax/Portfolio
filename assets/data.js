@@ -82,6 +82,23 @@ export const projects = [
     page: routes.wheello,
   },
   {
+    // Projet à compléter plus tard (pas encore de page dédiée)
+    title: 'Cyber 1',
+    subtitle: 'Cybersécurité — BTS SIO',
+    text: 'Description du projet à venir.',
+    tags: ['Cybersécurité'],
+    category: 'CYBERSÉCURITÉ',
+  },
+  {
+    title: 'Cyber 2',
+    subtitle: 'Cybersécurité · AP2 — 2026',
+    text: "Modèle d'application Symfony sécurisé : mots de passe robustes, protection contre la force brute, espace administrateur, historique des connexions et déploiement automatique avec GitHub Actions.",
+    tags: ['Symfony', 'Sécurité', 'GitHub Actions', 'MariaDB'],
+    category: 'CYBERSÉCURITÉ',
+    // Page dédiée au projet (contenu dans l'objet `cyber2` plus bas)
+    page: routes.cyber2,
+  },
+  {
     title: 'Ce portfolio',
     subtitle: 'Projet personnel — 2026',
     text: 'Mon site personnel : une page unique, responsive, avec une petite scène 3D en arrière-plan et un terminal interactif.',
@@ -178,6 +195,125 @@ export const wheello = {
     { title: 'Données & outils', items: ['MySQL', 'Docker', 'Git'] },
     { title: 'Qualité', items: ['Tests unitaires', 'PHPUnit'] },
   ],
+}
+
+// Contenu de la page dédiée au projet Cyber 2 (route /cyber-2), repris de notre diaporama de présentation
+export const cyber2 = {
+  title: 'Cyber 2',
+  name: 'Modèle Symfony sécurisé',
+  tagline: 'Gestion des accès, des habilitations et déploiement continu avec GitHub Actions.',
+  context: 'BTS SIO · Cybersécurité · AP2',
+  period: 'Octobre 2026',
+  team: 'En binôme',
+  repo: 'chounlax/modele',
+
+  // 01 — Le cahier des charges
+  mission: [
+    { icon: 'users', title: 'Compte utilisateur', text: 'Inscription et connexion, avec des saisies validées (nom, prénom, adresse, ville, code postal).' },
+    { icon: 'lock', title: 'Mot de passe robuste', text: 'Longueur, complexité et non-compromission.' },
+    { icon: 'check', title: 'Nouveau mot de passe', text: 'Interdiction de réutiliser un ancien mot de passe.' },
+    { icon: 'alert', title: 'Anti force brute', text: 'Connexion protégée contre les essais en série.' },
+    { icon: 'shield', title: 'Administration', text: 'Comptes, rôles, suspension et historique des connexions.' },
+    { icon: 'code', title: 'Base réutilisable', text: "Hébergée sur GitHub, prête pour d'autres projets." },
+  ],
+
+  // Les outils utilisés (en bleu : les plus importants)
+  stack: [
+    { title: 'Application', items: ['Symfony 7.4', 'PHP 8.3', 'Doctrine ORM', 'Twig', 'MariaDB 10.11', 'Apache'], key: ['Symfony 7.4'] },
+    { title: 'Livraison', items: ['Git', 'GitHub', 'GitHub Actions', 'Runner auto-hébergé', 'systemd', 'Composer'], key: ['GitHub Actions'] },
+  ],
+  securityComponents: ['security-bundle', 'password-hasher', 'validator', 'rate-limiter', 'csrf'],
+
+  // 02 — GitHub Actions
+  before: ['Se connecter au serveur', 'git pull', 'composer install', 'Lancer les migrations', 'Vider le cache'],
+  flow: [
+    { icon: 'code', title: 'Poste de développement', lines: ['$ git push origin main'] },
+    { icon: 'globe', title: 'GitHub', lines: ['chounlax/modele', 'workflow deploy.yml'] },
+    { icon: 'cpu', title: 'Runner auto-hébergé', lines: ['/opt/actions-runner', 'service systemd'] },
+    { icon: 'check', title: 'Site de test à jour', lines: ['/var/www/html/modele'] },
+  ],
+  workflowRun: ['Set up job', 'Récupérer les modifications', 'Installer les dépendances', 'Mettre à jour la base', 'Vider le cache'],
+  runner: [
+    { icon: 'wifi', title: 'Connexion sortante', text: "Le runner va vers GitHub : pas d'IP publique ni de port à ouvrir." },
+    { icon: 'tool', title: 'Service systemd', text: 'Installé avec svc.sh : il tourne en permanence et redémarre avec la machine.' },
+    { icon: 'lock', title: 'Droits limités', text: 'Dans /opt/actions-runner, hors du site web, sous un compte utilisateur et jamais en root.' },
+  ],
+  compare: [
+    {
+      title: 'Runner auto-hébergé',
+      subtitle: 'La machine va vers GitHub',
+      pros: ['Aucun port à ouvrir sur la machine', 'Pas de clé privée stockée dans GitHub', 'Marche derrière un pare-feu ou un NAT'],
+      cons: ['Un service à faire tourner et mettre à jour', 'Risqué sur un dépôt public (pull requests)', 'Un runner à installer par serveur'],
+    },
+    {
+      title: 'Clés SSH',
+      subtitle: 'GitHub vient vers la machine',
+      pros: ['Méthode standard, rien à installer', 'Une clé publique dans authorized_keys', 'Un workflow peut viser plusieurs serveurs'],
+      cons: ['Machine joignable : IP publique + port SSH', 'Clé privée dans les secrets GitHub', 'Clé volée = accès shell à la machine'],
+    },
+  ],
+
+  // 03 — Sécurité
+  passwordRules: [
+    '12 caractères minimum',
+    'Une majuscule et une minuscule',
+    'Au moins un chiffre',
+    'Au moins un caractère spécial',
+    'Difficile à deviner · PasswordStrength',
+    'Absent des fuites · NotCompromisedPassword',
+  ],
+  passwordShot: { src: asset('projects/cyber2/mot-de-passe-refuse.png'), caption: 'Inscription avec « password » : chaque règle manquante est signalée' },
+  passwordChange: [
+    { title: 'Mot de passe actuel', text: 'Vérifié par la contrainte UserPassword' },
+    { title: 'Nouveau mot de passe', text: 'Doit respecter StrongPassword' },
+    { title: "Comparaison à l'historique", text: 'Testé contre chaque ancienne empreinte' },
+    { title: 'Enregistrement', text: "Nouveau hash, ajouté à l'historique" },
+  ],
+  adminShot: { src: asset('projects/cyber2/admin-utilisateurs.png'), caption: "Liste des utilisateurs dans l'espace administrateur (comptes de test)" },
+  adminPoints: [
+    { icon: 'users', text: 'Ajouter, modifier ou supprimer un compte' },
+    { icon: 'shield', text: 'Attribuer les rôles ROLE_USER et ROLE_ADMIN' },
+    { icon: 'lock', text: 'Suspendre : connexion refusée et session coupée' },
+    { icon: 'check', text: '/admin réservé à ROLE_ADMIN par access_control' },
+    { icon: 'alert', text: "Jeton CSRF sur chaque action, pas d'auto-suspension" },
+  ],
+  history: [
+    ['11/10/2026', '20:20:51', true, '127.0.0.1'],
+    ['11/10/2026', '20:20:49', false, '127.0.0.1'],
+    ['11/10/2026', '20:20:47', true, '127.0.0.1'],
+  ],
+  historyFacts: [
+    ['QUAND', 'À chaque connexion, réussie ou échouée'],
+    ['QUOI', 'Date, heure, adresse IP et navigateur'],
+    ['COMMENT', 'LoginHistorySubscriber écoute les évènements de connexion'],
+    ['SUPPRESSION', 'Effacé avec le compte (ON DELETE CASCADE)'],
+  ],
+  validation: [
+    ['Nom, prénom', 'NotBlank · Length de 2 à 55 · Regex : lettres, espaces, tirets'],
+    ['Adresse', 'NotBlank · Length de 5 à 100'],
+    ['Code postal', 'NotBlank · Regex : exactement 5 chiffres'],
+    ['Ville', "NotBlank · Length jusqu'à 55 · Regex : lettres"],
+    ['E-mail', 'NotBlank · Email · UniqueEntity : pas de doublon'],
+    ['Conditions', 'IsTrue : case à cocher obligatoire'],
+  ],
+
+  // 04 — Bilan
+  tests: [
+    'Mot de passe faible refusé, règles détaillées',
+    'Ancien mot de passe refusé au changement',
+    'Mot de passe actuel erroné refusé',
+    '6e tentative de connexion bloquée 15 min',
+    '/admin refusé à un simple utilisateur (403)',
+    'Compte suspendu déconnecté aussitôt',
+    'Un admin ne peut pas se suspendre',
+    "Chaque connexion visible dans l'historique",
+  ],
+  reuse: [
+    { code: 'README.md', title: 'Installer le projet', text: 'Les étapes pour cloner, configurer la base et lancer les migrations.' },
+    { code: 'app:make-admin', title: 'Premier administrateur', text: 'Une commande donne le rôle ROLE_ADMIN à un compte existant.' },
+    { code: 'User::ROLES', title: 'Ajouter un rôle', text: "Une ligne dans l'entité, et le rôle apparaît dans l'espace admin." },
+  ],
+  newProject: ['git clone', 'composer install', 'migrations:migrate', 'app:make-admin'],
 }
 
 // Contenu de la page de veille technologique (route /veille)

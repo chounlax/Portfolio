@@ -21,6 +21,7 @@ export default defineConfig({
         main: fileURLToPath(new URL('./assets/main.jsx', import.meta.url)),
         wheello: fileURLToPath(new URL('./assets/wheello.jsx', import.meta.url)),
         veille: fileURLToPath(new URL('./assets/veille.jsx', import.meta.url)),
+        cyber2: fileURLToPath(new URL('./assets/cyber2.jsx', import.meta.url)),
       },
     },
   },

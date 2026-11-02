@@ -6,6 +6,7 @@ export const routes = {
   home: data.home ?? '/',
   wheello: data.wheello ?? '/wheello',
   veille: data.veille ?? '/veille',
+  cyber2: data.cyber2 ?? '/cyber-2',
 }
 
 // Chemin d'un fichier du dossier public/ (images, CV...)
