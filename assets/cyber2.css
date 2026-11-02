@@ -83,6 +83,47 @@
   50% { opacity: 0; }
 }
 
+/* ---------- Vidéo de présentation ---------- */
+.cvideo {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+/* cadre façon téléphone autour de la vidéo verticale */
+.cvideo__frame {
+  padding: 10px;
+  border: 2px solid var(--ink);
+  border-radius: 28px;
+  background: var(--night);
+  box-shadow: 10px 10px 0 var(--blue);
+}
+
+.cvideo__frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  background: var(--night);
+}
+
+.cvideo__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+}
+
+.cvideo__points li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
 /* ---------- Éléments communs ---------- */
 .cintro {
   max-width: 46rem;
@@ -761,6 +802,13 @@
 
 /* ---------- Petits écrans ---------- */
 @media (max-width: 860px) {
+  .cvideo {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .cvideo__frame {
+    width: min(100%, 340px);
+  }
   .cbefore,
   .cyaml,
   .ccompare,

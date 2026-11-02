@@ -207,6 +207,15 @@ export const cyber2 = {
   team: 'En binôme',
   repo: 'chounlax/modele',
 
+  // Vidéo de présentation (format vertical, 60 s), affichée sous l'en-tête
+  video: {
+    src: asset('projects/cyber2/presentation.mp4'),
+    poster: asset('projects/cyber2/presentation-poster.jpg'),
+    title: 'Le projet en 60 secondes',
+    text: "Une vidéo motion design qui reprend le diaporama de présentation : la politique de mot de passe, la protection contre la force brute, l'espace administrateur, l'historique des connexions puis le déploiement automatique avec GitHub Actions.",
+    points: ['Animation codée en HTML / JavaScript', 'Rendue image par image (60 i/s)', 'Musique et bruitages générés en Python'],
+  },
+
   // 01 — Le cahier des charges
   mission: [
     { icon: 'users', title: 'Compte utilisateur', text: 'Inscription et connexion, avec des saisies validées (nom, prénom, adresse, ville, code postal).' },

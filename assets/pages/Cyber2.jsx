@@ -88,6 +88,32 @@ function Hero() {
   )
 }
 
+// Vidéo de présentation, dans un cadre « téléphone » (format vertical)
+function Video() {
+  return (
+    <section id="video" className="section">
+      <Title kicker="// 00 — EN VIDÉO">{c.video.title}</Title>
+      <div className="cvideo">
+        <div className="cvideo__frame reveal">
+          <video src={c.video.src} poster={c.video.poster} controls playsInline preload="metadata">
+            Ton navigateur ne peut pas lire cette vidéo.
+          </video>
+        </div>
+        <div className="cvideo__text reveal">
+          <p className="body-text">{c.video.text}</p>
+          <ul className="cvideo__points">
+            {c.video.points.map((p) => (
+              <li key={p}>
+                <span className="square" /> {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Mission() {
   return (
     <section id="projet" className="section">
@@ -520,6 +546,7 @@ export default function Cyber2() {
     <>
       <PageNav
         links={[
+          ['#video', 'Vidéo'],
           ['#projet', 'Projet'],
           ['#actions', 'GitHub Actions'],
           ['#securite', 'Sécurité'],
@@ -528,6 +555,7 @@ export default function Cyber2() {
       />
       <main>
         <Hero />
+        <Video />
         <Mission />
         <Actions />
         <Security openGallery={openGallery} />
