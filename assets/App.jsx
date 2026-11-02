@@ -391,7 +391,12 @@ function Projects() {
       <Title>Projets</Title>
       <div className="grid-3">
         {projects.map((p, i) => (
-          <article key={p.title} className={`box project reveal ${p.page ? 'project--link' : ''}`}>
+          <article
+            key={p.title}
+            className={`box project reveal ${p.page ? 'project--link' : ''} ${p.color ? 'project--themed' : ''}`}
+            // chaque projet a sa couleur : on remplace les variables --blue / --blue-soft dans la carte
+            style={p.color ? { '--blue': p.color[0], '--blue-soft': p.color[1] } : undefined}
+          >
             <span className="project__num" aria-hidden="true">
               {String(i + 1).padStart(2, '0')}
             </span>

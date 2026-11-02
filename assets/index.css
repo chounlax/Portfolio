@@ -839,6 +839,14 @@ ul {
   gap: 0.6rem;
 }
 
+.project--themed {
+  border-top: 8px solid var(--blue);
+}
+
+.project--themed:hover {
+  box-shadow: 10px 10px 0 var(--blue);
+}
+
 .project__num {
   position: absolute;
   right: -0.4rem;

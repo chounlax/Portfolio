@@ -24,6 +24,7 @@ class ExportStaticCommand
         '/' => 'index.html',
         '/wheello' => 'wheello/index.html',
         '/veille' => 'veille/index.html',
+        '/cyber-1' => 'cyber-1/index.html',
         '/cyber-2' => 'cyber-2/index.html',
     ];
 

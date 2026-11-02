@@ -1,0 +1,30 @@
+/* Thème vert de la page Cyber 1.
+   Ce fichier n'est chargé que sur /cyber-1 : on y redéfinit les variables
+   de couleur d'index.css (le reste du site garde son bleu). La mise en page est dans cyber.css. */
+:root {
+  --blue: #15803d; /* accent vert */
+  --blue-dark: #166534;
+  --blue-soft: #dcfce7;
+  --blue-mist: #9fd4b0;
+  --ink: #0f2a1d; /* texte, bordures, ombres */
+  --ink-2: #22392d;
+  --muted: #5b7065;
+  --line: #cfe3d6;
+  --paper: #f3faf5;
+  --paper-2: #e5f2e9;
+  --night: #0b1f15; /* fonds sombres */
+  /* couleurs propres aux blocs sombres de cette page */
+  --c-light: #86efac;
+  --c-text: #cfe8d8;
+  --c-card: #12301f;
+  --c-line: rgba(134, 239, 172, 0.35);
+  --c-slate: #5fa57a;
+  --c-grid: rgba(21, 128, 61, 0.06);
+  --c-grid-dark: rgba(134, 239, 172, 0.07);
+  --c-nav: rgba(243, 250, 245, 0.97);
+  --c-corner: rgba(134, 239, 172, 0.6);
+  --c-accent-dark: #4ade80;
+  --c-pout: #dcfce7;
+  --c-accent-bg: rgba(21, 128, 61, 0.2);
+  --c-card-alpha: rgba(18, 48, 31, 0.8);
+}

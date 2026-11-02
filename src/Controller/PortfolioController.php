@@ -26,6 +26,12 @@ class PortfolioController extends AbstractController
         return $this->render('portfolio/veille.html.twig');
     }
 
+    #[Route('/cyber-1', name: 'cyber1')]
+    public function cyber1(): Response
+    {
+        return $this->render('portfolio/cyber1.html.twig');
+    }
+
     #[Route('/cyber-2', name: 'cyber2')]
     public function cyber2(): Response
     {

@@ -78,16 +78,20 @@ export const projects = [
     tags: ['Symfony', 'Flutter', 'Dart', 'API REST', 'JWT', 'Tests'],
     category: 'WEB · MOBILE',
     cover: asset('projects/wheello/cover.webp'),
+    // couleur du projet (carte de l'accueil) : [accent, fond clair]
+    color: ['#2152d9', '#e6edfc'],
     // Page dédiée au projet (contenu dans l'objet `wheello` plus bas)
     page: routes.wheello,
   },
   {
-    // Projet à compléter plus tard (pas encore de page dédiée)
     title: 'Cyber 1',
     subtitle: 'Cybersécurité — BTS SIO',
-    text: 'Description du projet à venir.',
-    tags: ['Cybersécurité'],
+    text: "Sauvegarde automatisée et sécurisée d'une base MariaDB d'un serveur A vers un serveur B : chiffrement GPG, empreinte SHA-256, transfert SFTP chaque nuit et vérification d'intégrité.",
+    tags: ['Python', 'GPG', 'SFTP', 'MariaDB', 'CRON'],
     category: 'CYBERSÉCURITÉ',
+    color: ['#15803d', '#dcfce7'],
+    // Page dédiée au projet (contenu dans l'objet `cyber1` plus bas)
+    page: routes.cyber1,
   },
   {
     title: 'Cyber 2',
@@ -95,6 +99,7 @@ export const projects = [
     text: "Modèle d'application Symfony sécurisé : mots de passe robustes, protection contre la force brute, espace administrateur, historique des connexions et déploiement automatique avec GitHub Actions.",
     tags: ['Symfony', 'Sécurité', 'GitHub Actions', 'MariaDB'],
     category: 'CYBERSÉCURITÉ',
+    color: ['#7c3aed', '#ede9fe'],
     // Page dédiée au projet (contenu dans l'objet `cyber2` plus bas)
     page: routes.cyber2,
   },
@@ -195,6 +200,63 @@ export const wheello = {
     { title: 'Données & outils', items: ['MySQL', 'Docker', 'Git'] },
     { title: 'Qualité', items: ['Tests unitaires', 'PHPUnit'] },
   ],
+}
+
+// Contenu de la page dédiée au projet Cyber 1 (route /cyber-1), repris du plan de présentation
+export const cyber1 = {
+  title: 'Cyber 1',
+  name: 'Sauvegarde automatisée et sécurisée',
+  tagline: "Une base MariaDB exportée, chiffrée avec GPG et envoyée chaque nuit d'un serveur A vers un serveur B, avec un contrôle d'intégrité.",
+  context: 'BTS SIO · Cybersécurité',
+  schedule: 'Tous les jours à 02h00',
+  tools: 'Python · GPG · SFTP',
+  tests: '12 tests logiques',
+
+  // 01 — Les objectifs
+  goals: [
+    { icon: 'database', title: 'Sauvegarder', text: 'Exporter la base MariaDB en fichier SQL.' },
+    { icon: 'lock', title: 'Protéger', text: 'Chiffrer la sauvegarde : illisible sans la clé.' },
+    { icon: 'send', title: 'Stocker à distance', text: 'Envoyer la sauvegarde sur un second serveur.' },
+    { icon: 'shield', title: 'Contrôler', text: 'Vérifier à tout moment que rien n\'a été altéré.' },
+    { icon: 'calendar', title: 'Automatiser', text: 'Lancer la sauvegarde seule, chaque nuit.' },
+    { icon: 'arrowLeft', title: 'Restaurer', text: 'Pouvoir remettre les données en place.' },
+  ],
+
+  // 02 — Le workflow, sur le serveur A
+  workflow: [
+    { icon: 'database', title: 'Export', lines: ['Dump MariaDB', 'fichier .sql temporaire'] },
+    { icon: 'lock', title: 'Chiffrement', lines: ['GPG', 'puis suppression du .sql'] },
+    { icon: 'check', title: 'Intégrité', lines: ['empreinte SHA-256'] },
+    { icon: 'send', title: 'Transfert SFTP', lines: ['vers le serveur B'] },
+  ],
+  received: [
+    ['.sql.gpg', 'la base chiffrée'],
+    ['.json', 'les informations de la sauvegarde'],
+    ['.ready', 'le transfert est terminé'],
+  ],
+
+  // 03 — Architecture et sécurité
+  servers: [
+    { name: 'Serveur A', role: 'ACTIF', points: ['Lance les sauvegardes', 'Détient la clé privée GPG', 'Garde l\'empreinte de référence'] },
+    { name: 'Serveur B', role: 'PASSIF', points: ['Stocke uniquement', 'Ne peut pas déchiffrer', 'Reçoit les fichiers par SFTP'] },
+  ],
+  verify: [
+    { title: 'Récupère', text: 'A télécharge la sauvegarde stockée sur B' },
+    { title: 'Recalcule', text: "l'empreinte SHA-256 du fichier" },
+    { title: 'Compare', text: 'avec la référence gardée sur A' },
+    { title: 'Conclut', text: 'intacte, ou altération détectée' },
+  ],
+
+  // 04 — Automatisation et tests
+  doctor: ['MariaDB répond', 'Clés SSH présentes', 'Clé GPG présente', 'Accès SFTP au serveur B'],
+
+  // 05 — Pilotage et bilan
+  menu: ['Nouvelle sauvegarde', 'Vérifier', 'Restaurer', 'Historique'],
+  paths: [
+    ['/home/apbackup/.ssh', 'les clés SSH pour le SFTP'],
+    ['trousseau GPG', 'les clés de chiffrement'],
+  ],
+  results: ['Automatique', 'Sécurisé', 'Vérifiable', 'Restaurable'],
 }
 
 // Contenu de la page dédiée au projet Cyber 2 (route /cyber-2), repris de notre diaporama de présentation

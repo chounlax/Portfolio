@@ -6,6 +6,7 @@ export const routes = {
   home: data.home ?? '/',
   wheello: data.wheello ?? '/wheello',
   veille: data.veille ?? '/veille',
+  cyber1: data.cyber1 ?? '/cyber-1',
   cyber2: data.cyber2 ?? '/cyber-2',
 }
 
