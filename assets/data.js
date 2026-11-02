@@ -90,6 +90,7 @@ export const projects = [
     tags: ['Python', 'GPG', 'SFTP', 'MariaDB', 'CRON'],
     category: 'CYBERSÉCURITÉ',
     color: ['#15803d', '#dcfce7'],
+    cover: asset('projects/cyber1/cover.webp'),
     // Page dédiée au projet (contenu dans l'objet `cyber1` plus bas)
     page: routes.cyber1,
   },
@@ -100,6 +101,7 @@ export const projects = [
     tags: ['Symfony', 'Sécurité', 'GitHub Actions', 'MariaDB'],
     category: 'CYBERSÉCURITÉ',
     color: ['#7c3aed', '#ede9fe'],
+    cover: asset('projects/cyber2/cover.webp'),
     // Page dédiée au projet (contenu dans l'objet `cyber2` plus bas)
     page: routes.cyber2,
   },
@@ -108,6 +110,7 @@ export const projects = [
     subtitle: 'Projet personnel — 2026',
     text: 'Mon site personnel : une page unique, responsive, avec une petite scène 3D en arrière-plan et un terminal interactif.',
     tags: ['React', 'Vite', 'three.js', 'CSS'],
+    cover: asset('projects/portfolio/cover.webp'),
     category: 'WEB',
   },
 ]

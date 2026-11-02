@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import { lazy, useState } from 'react'
 import Icon from '../components/Icon.jsx'
+import PageScene from '../components/PageScene.jsx'
 import Gallery from '../components/Gallery.jsx'
 import PageNav, { PageTitle as Title } from '../components/PageNav.jsx'
 import { routes } from '../urls.js'
 import { useReveal } from '../hooks.js'
 import { profile, wheello as w } from '../data.js'
+
+// Scène 3D de l'en-tête, chargée à part pour que le texte s'affiche tout de suite
+const Scene3D = lazy(() => import('../components/scenes/WheelloScene.jsx'))
 
 // Cadre « navigateur » autour d'une capture du back-office
 function BrowserFrame({ image, onClick, label = 'wheello · back-office' }) {
@@ -39,6 +43,7 @@ function Hero({ openGallery }) {
   ]
   return (
     <section className="phero">
+      <PageScene Scene={Scene3D} />
       <div className="phero__text">
         <p className="phero__kicker">
           <span className="dot-green" /> PROJET 01 · {w.team.toUpperCase()}

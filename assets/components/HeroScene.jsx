@@ -1,32 +1,8 @@
-import { useMemo, useRef } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { useMemo } from 'react'
+import { Canvas, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Float } from './effects.jsx'
-
-const BLUE = '#2152d9'
-
-// Forme façon « plan technique » : arêtes fines + petits points aux sommets
-function WireShape({ geometry, opacity = 0.3, speed = 0.1, dots = true, ...props }) {
-  const ref = useRef()
-  const edges = useMemo(() => new THREE.EdgesGeometry(geometry), [geometry])
-  useFrame((_, delta) => {
-    const dt = Math.min(delta, 0.05) // pas de saut quand la scène reprend après une pause
-    ref.current.rotation.y += dt * speed
-    ref.current.rotation.x += dt * speed * 0.4
-  })
-  return (
-    <group ref={ref} {...props}>
-      <lineSegments geometry={edges}>
-        <lineBasicMaterial color={BLUE} transparent opacity={opacity} />
-      </lineSegments>
-      {dots && (
-        <points geometry={geometry}>
-          <pointsMaterial color={BLUE} size={0.05} transparent opacity={Math.min(1, opacity * 2.5)} />
-        </points>
-      )}
-    </group>
-  )
-}
+import { MouseRig, WireShape } from './WireShape.jsx'
 
 function Shapes() {
   const geo = useMemo(
@@ -59,17 +35,6 @@ function Shapes() {
   )
 }
 
-// La caméra suit doucement la souris pour un effet de profondeur
-function Rig() {
-  const target = useMemo(() => new THREE.Vector3(), [])
-  useFrame((state, delta) => {
-    target.set(state.pointer.x * 0.6, state.pointer.y * 0.4, 8)
-    state.camera.position.lerp(target, 1 - Math.exp(-2 * delta))
-    state.camera.lookAt(0, 0, 0)
-  })
-  return null
-}
-
 // active = false quand l'en-tête est hors de l'écran : la scène arrête alors de se redessiner
 export default function HeroScene({ active = true }) {
   return (
@@ -80,7 +45,7 @@ export default function HeroScene({ active = true }) {
       frameloop={active ? 'always' : 'never'}
     >
       <Shapes />
-      <Rig />
+      <MouseRig />
     </Canvas>
   )
 }

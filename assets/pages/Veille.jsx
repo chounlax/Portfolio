@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import { lazy, useState } from 'react'
 import Icon from '../components/Icon.jsx'
+import PageScene from '../components/PageScene.jsx'
 import PageNav, { PageTitle as Title } from '../components/PageNav.jsx'
 import { routes } from '../urls.js'
 import { useReveal } from '../hooks.js'
 import { profile, veille as v } from '../data.js'
+
+// Scène 3D de l'en-tête, chargée à part pour que le texte s'affiche tout de suite
+const Scene3D = lazy(() => import('../components/scenes/VeilleScene.jsx'))
 
 const FILTERS = [
   ['TOUS', 'Tout'],
@@ -50,6 +54,7 @@ function Hero() {
   ]
   return (
     <section className="phero">
+      <PageScene Scene={Scene3D} />
       <div>
         <p className="phero__kicker">
           <span className="dot-green" /> VEILLE TECHNOLOGIQUE · BTS SIO

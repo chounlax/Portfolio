@@ -931,7 +931,6 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.4rem;
   padding: 0.5rem 0.9rem;
   border: 2px solid var(--ink);
   background: var(--ink);
@@ -943,6 +942,8 @@ ul {
   text-transform: uppercase;
   box-shadow: 4px 4px 0 var(--blue);
   transition: background 0.2s, gap 0.2s;
+  /* poussé en bas de la carte : le bouton est au même endroit sur toutes les cartes */
+  margin-top: auto;
 }
 
 .project--link:hover .project__more {

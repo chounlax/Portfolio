@@ -1,8 +1,13 @@
+import { lazy } from 'react'
 import Icon from '../components/Icon.jsx'
+import PageScene from '../components/PageScene.jsx'
 import PageNav, { PageTitle as Title } from '../components/PageNav.jsx'
 import { routes } from '../urls.js'
 import { useReveal } from '../hooks.js'
 import { profile, cyber1 as c } from '../data.js'
+
+// Scène 3D de l'en-tête, chargée à part pour que le texte s'affiche tout de suite
+const Scene3D = lazy(() => import('../components/scenes/Cyber1Scene.jsx'))
 
 // Petit sous-titre à l'intérieur d'une section
 function SubTitle({ children, kicker, dark = false }) {
@@ -30,6 +35,7 @@ function Hero() {
   ]
   return (
     <section className="phero">
+      <PageScene Scene={Scene3D} />
       <div>
         <p className="phero__kicker">
           <span className="dot-green" /> PROJET · CYBERSÉCURITÉ

@@ -70,6 +70,24 @@
   background-size: 40px 40px;
 }
 
+/* scène 3D en fond de l'en-tête (voir components/PageScene.jsx) */
+.phero__scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* le contenu de l'en-tête passe au-dessus de la scène 3D */
+.phero > :not(.phero__scene):not(.phero__corner) {
+  position: relative;
+  z-index: 1;
+}
+
+.phero__corner {
+  z-index: 1;
+}
+
 .phero__kicker,
 .pkicker {
   display: flex;
