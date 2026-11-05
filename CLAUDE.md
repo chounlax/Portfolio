@@ -18,7 +18,7 @@ Pas de base de données pour l'instant.
 - `src/Controller/PortfolioController.php` : routes `/` (home), `/wheello`, `/veille`
 - `templates/base.html.twig` : squelette commun ; chaque page de `templates/portfolio/` choisit son entrée Vite avec `{% set entry = '...' %}`
 - `src/Command/ExportStaticCommand.php` : export statique pour GitHub Pages (`.github/workflows/deploy.yml`) ; toute nouvelle route doit aussi être ajoutée dans sa constante `PAGES`
-- `.github/workflows/deploy-vps.yml` : déploie le vrai projet Symfony sur le VPS RedHeberg (Debian 13, Nginx + PHP 8.4-FPM) par rsync avec l'utilisateur `deploy`, dans `/var/www/portfolio` ; le `.env.local` de production reste sur le serveur ; secrets GitHub `VPS_HOST`, `VPS_USER`, `VPS_SSH_KEY`
+- `.github/workflows/deploy-vps.yml` : déploie (en ligne sur https://sean-thompson.dev, HTTPS Let's Encrypt) le vrai projet Symfony sur le VPS RedHeberg (Debian 13, Nginx + PHP 8.4-FPM) par rsync avec l'utilisateur `deploy`, dans `/var/www/portfolio` ; le `.env.local` de production reste sur le serveur ; secrets GitHub `VPS_HOST`, `VPS_USER`, `VPS_SSH_KEY`
 - `src/Twig/ViteExtension.php` : fonctions Twig `vite_entry_link_tags()` / `vite_entry_script_tags()` qui lisent `public/build/.vite/manifest.json`
 - `assets/data.js` : tous les textes du portfolio
 - `assets/urls.js` : adresses transmises par Twig (attributs `data-*` de `#root`)
