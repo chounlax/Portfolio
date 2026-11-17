@@ -106,6 +106,17 @@ export const projects = [
     page: routes.cyber2,
   },
   {
+    title: 'Cyber 3',
+    subtitle: 'Cybersécurité · AP3 — 2026',
+    text: "Tests automatisés et intégration continue : 34 tests PHPUnit vérifient la sécurité de l'application de Cyber 2, GitHub Actions les lance à chaque pull request et bloque la fusion si un test échoue.",
+    tags: ['Symfony', 'PHPUnit', 'GitHub Actions', 'CI/CD'],
+    category: 'CYBERSÉCURITÉ',
+    color: ['#0e8fa0', '#e0f5f7'],
+    cover: asset('projects/cyber3/cover.webp'),
+    // Pour l'instant, la carte ouvre directement le diaporama de l'oral (fichier HTML autonome)
+    page: asset('projects/cyber3/diaporama.html'),
+  },
+  {
     title: 'Ce portfolio',
     subtitle: 'Projet personnel — 2026',
     text: 'Mon site personnel : une page unique, responsive, avec une petite scène 3D en arrière-plan et un terminal interactif.',
