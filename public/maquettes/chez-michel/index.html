@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Maquette réalisée par Sean Thompson pour un prospect : à ne pas indexer -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Chez Michel — Chambres d&#39;hôtes au cœur d&#39;Arras</title>
+  <title>Chez Michel — Chambres d&#39;hôtes &amp; Studios meublés à Arras</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
 globalThis.tailwind = globalThis.tailwind || {};
@@ -12,83 +12,69 @@ globalThis.tailwind.config = {
   theme: {
     extend: {
       colors: {
-        'terracotta': '#B2533E',
-        'terracotta-dark': '#8F3A28',
-        'sage': '#4A6B53',
-        'sage-light': '#E4EDE6',
-        'sand': '#EADCC9',
-        'sand-light': '#F7F3EC',
-        'cream': '#FAF7F2',
-        'light-primary': '#8F3A28',
+        'primary': '#A63D2A',
+        'primary-hover': '#7E2C1E',
+        'charcoal': '#1F1B18',
+        'text-main': '#2B2420',
+        'cream': '#F7F3EE',
+        'sand': '#E8DFD3',
+        'sage': '#5E7A5B',
+        'light-primary': '#A63D2A',
         'light-on-primary': '#FFFFFF',
-        'light-primary-container': '#FCEEEB',
-        'light-on-primary-container': '#571E12',
-        'light-secondary': '#3D5A44',
-        'light-on-secondary': '#FFFFFF',
-        'light-secondary-container': '#E4EDE6',
-        'light-on-secondary-container': '#182E1E',
-        'light-surface': '#FAF7F2',
-        'light-on-surface': '#2A2521',
-        'light-surface-variant': '#F2ECE4',
-        'light-on-surface-variant': '#5C554E',
-        'light-surface-container-low': '#FFFFFF',
-        'light-surface-container': '#F5F0E8',
-        'light-outline': '#D9D0C5',
-        'light-outline-variant': '#E8E2D9',
+        'light-surface': '#F7F3EE',
+        'light-on-surface': '#2B2420',
+        'light-surface-variant': '#E8DFD3',
+        'light-on-surface-variant': '#2B2420',
+        'light-outline': '#D1C4B2',
       },
       borderRadius: {
-        'sm': '6px',
-        'DEFAULT': '10px',
-        'md': '14px',
-        'lg': '18px',
-        'xl': '24px',
-        '2xl': '32px',
+        'none': '0px',
+        'sm': '0px',
+        'DEFAULT': '0px',
+        'md': '0px',
+        'lg': '0px',
         'full': '9999px',
       },
       spacing: {
-        'xs': '4px',
-        'sm': '8px',
-        'md': '16px',
-        'lg': '24px',
-        'xl': '32px',
-        '2xl': '48px',
-        '3xl': '64px',
-        'section': '80px',
-        'page-margin': '24px',
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section-gap': '80px',
+        'container-max': '1240px',
       },
       fontFamily: {
-        'display': ['"Playfair Display"', 'sans-serif'],
-        'headline': ['"Playfair Display"', 'sans-serif'],
-        'title': ['"Playfair Display"', 'sans-serif'],
-        'body': ['"Raleway"', 'sans-serif'],
-        'label': ['"Raleway"', 'sans-serif'],
+        'display': ['"Montserrat"', 'sans-serif'],
+        'headline': ['"Montserrat"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Montserrat"', 'sans-serif'],
       },
       fontSize: {
-        'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.5px', fontWeight: '700' }],
-        'display-lg-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.2px', fontWeight: '700' }],
-        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.25px', fontWeight: '600' }],
-        'headline-lg-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.15px', fontWeight: '600' }],
-        'headline-md': ['26px', { lineHeight: '34px', fontWeight: '600' }],
-        'title-lg': ['22px', { lineHeight: '28px', fontWeight: '600' }],
-        'title-md': ['18px', { lineHeight: '24px', fontWeight: '600' }],
-        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
-        'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
-        'body-sm': ['14px', { lineHeight: '20px', fontWeight: '400' }],
-        'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.5px', fontWeight: '600' }],
-        'label-md': ['13px', { lineHeight: '18px', letterSpacing: '0.5px', fontWeight: '600' }],
-        'label-sm': ['11px', { lineHeight: '16px', letterSpacing: '0.5px', fontWeight: '600' }],
+        'display-lg': ['52px', { lineHeight: '60px', letterSpacing: '-1px', fontWeight: '800' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '800' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '800' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '800' }],
+        'headline-md': ['24px', { lineHeight: '30px', letterSpacing: '-0.2px', fontWeight: '800' }],
+        'headline-md-mobile': ['20px', { lineHeight: '26px', letterSpacing: '-0.2px', fontWeight: '800' }],
+        'headline-sm': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-sm-mobile': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-md': ['13px', { lineHeight: '18px', letterSpacing: '1px', fontWeight: '700' }],
+        'label-sm': ['11px', { lineHeight: '16px', letterSpacing: '1.5px', fontWeight: '700' }],
       },
       transitionDuration: {
-        'state-change': '150ms',
-        'surface-enter': '250ms',
+        'hover': '180ms',
+        'transition': '300ms',
       },
       transitionDelay: {
-        'state-change': '0ms',
-        'surface-enter': '0ms',
+        'hover': '0ms',
+        'transition': '0ms',
       },
       transitionTimingFunction: {
-        'state-change': 'ease-out',
-        'surface-enter': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'hover': 'ease-out',
+        'transition': 'cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },
@@ -97,7 +83,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <style>
     .material-symbols-outlined {
@@ -111,721 +97,791 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
       direction: ltr;
       vertical-align: middle;
     }
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+    /* Sharp edges per art direction - zero radius throughout */
+    * {
+      border-radius: 0px !important;
+    }
   </style>
 </head>
-<body class="bg-light-surface text-light-on-surface font-body antialiased min-h-[1024px] selection:bg-sand selection:text-light-on-surface" data-stitch-vh="min-h-[1024px]===min-h-screen">
+<body class="bg-cream text-text-main font-body antialiased selection:bg-primary selection:text-white">
 
-  <!-- 1. Small discreet banner at the very top -->
-  <aside class="w-full bg-sand-light border-b border-light-outline-variant py-1.5 px-4 text-center">
-    <p class="font-body text-body-sm text-light-on-surface-variant flex items-center justify-center gap-2">
-      <span class="inline-block w-1.5 h-1.5 rounded-full bg-terracotta"></span>
-      <span data-design-text-token="body-sm">Maquette — contenu provisoire</span>
-    </p>
-  </aside>
+  <!-- DISCREET PROVISIONAL NOTICE -->
+  <div class="bg-charcoal/90 text-cream/80 text-[11px] tracking-widest uppercase py-1 text-center border-b border-white/10 font-label">
+    Maquette — contenu provisoire
+  </div>
 
-  <!-- 2. Header: logo text "Chez Michel" + menu (Chambres, Tarifs, À découvrir, Contact) + button "Réserver" -->
-  <header class="sticky top-0 z-40 bg-light-surface/95 backdrop-blur-sm border-b border-light-outline-variant transition-all">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Logo text -->
-      <a href="#" class="group flex flex-col">
-        <span class="font-headline text-headline-md font-bold tracking-tight text-light-on-surface group-hover:text-light-primary transition-colors" data-design-text-token="headline-md">Chez Michel</span>
-        <span class="font-body text-xs tracking-wider uppercase text-light-on-surface-variant">Chambres d&#39;hôtes · Arras</span>
-      </a>
-
-      <!-- Menu links -->
-      <nav class="hidden md:flex items-center gap-8 font-label text-label-lg" aria-label="Navigation principale">
-        <a href="#chambres" class="text-light-on-surface hover:text-light-primary transition-colors py-1" data-design-text-token="label-lg">Chambres</a>
-        <a href="#petit-dejeuner" class="text-light-on-surface hover:text-light-primary transition-colors py-1" data-design-text-token="label-lg">Le petit-déjeuner</a>
-        <a href="#tarifs" class="text-light-on-surface hover:text-light-primary transition-colors py-1" data-design-text-token="label-lg">Tarifs</a>
-        <a href="#decouvrir" class="text-light-on-surface hover:text-light-primary transition-colors py-1" data-design-text-token="label-lg">À découvrir</a>
-        <a href="#contact" class="text-light-on-surface hover:text-light-primary transition-colors py-1" data-design-text-token="label-lg">Contact</a>
-      </nav>
-
-      <!-- Action button "Réserver" -->
-      <div class="flex items-center gap-4">
-        <a href="#contact" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-light-primary text-light-on-primary hover:bg-terracotta-dark transition-colors duration-state-change font-label text-label-md shadow-sm">
-          <span data-design-text-token="label-md">Réserver</span>
-        </a>
+  <!-- THIN CHARCOAL TOP BAR -->
+  <header class="bg-charcoal text-cream border-b border-white/5 py-2 px-6 lg:px-12">
+    <div class="max-w-[1240px] mx-auto flex items-center justify-between text-xs tracking-wider">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5 text-cream/70 text-label-sm">
+          <span class="material-symbols-outlined text-sage text-sm">location_on</span>
+          Arras, Pas-de-Calais
+        </span>
+        <span class="hidden md:inline-block text-cream/40">|</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-cream/70 text-label-sm">
+          <span class="material-symbols-outlined text-sage text-sm">history_edu</span>
+          Hôtel particulier des années 1920
+        </span>
+      </div>
+      <div class="flex items-center gap-6 text-label-sm uppercase font-label">
+        <a href="#quartier" class="text-cream/80 hover:text-white transition-colors">Accès</a>
+        <a href="#tarifs" class="text-cream/80 hover:text-white transition-colors">Infos pratiques</a>
+        <span class="text-cream/40">|</span>
+        <div class="flex items-center gap-2 font-bold">
+          <span class="text-primary font-black">FR</span>
+          <span class="text-cream/40">/</span>
+          <a href="#" class="text-cream/60 hover:text-white transition-colors">EN</a>
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- CREAM HEADER BAR WITH BRICK RED LOGO BLOCK -->
+  <div class="bg-cream border-b border-sand sticky top-0 z-40">
+    <div class="max-w-[1240px] mx-auto flex items-stretch justify-between h-20 px-6 lg:px-12">
+      
+      <!-- LOGO BLOCK ON THE LEFT (Solid brick red block) -->
+      <div class="flex items-center">
+        <a href="#" class="bg-primary hover:bg-primary-hover transition-colors px-6 h-full flex flex-col justify-center text-white shadow-sm">
+          <span class="font-script text-3xl md:text-4xl leading-none text-cream tracking-wide">Chez Michel</span>
+          <span class="font-label text-[9px] uppercase tracking-[0.2em] text-cream/80 mt-1">Maison d&#39;hôtes · Arras</span>
+        </a>
+      </div>
+
+      <!-- HORIZONTAL MENU IN BOLD DARK-BROWN SANS-SERIF -->
+      <nav class="hidden lg:flex items-center gap-8 font-headline font-bold text-sm tracking-wide text-text-main">
+        <a href="#chambres" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Chambres</a>
+        <a href="#studios" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Studios</a>
+        <a href="#tarifs" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Tarifs</a>
+        <a href="#quartier" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Le quartier</a>
+        <a href="#contact" class="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">Contact</a>
+      </nav>
+
+      <!-- RIGHT SIDE: PHONE ICON + BRICK RED RÉSERVER BUTTON -->
+      <div class="flex items-center gap-5">
+        <a href="tel:[téléphone]" class="hidden sm:flex items-center gap-2 text-text-main hover:text-primary transition-colors" title="Nous contacter par téléphone">
+          <span class="w-9 h-9 bg-sand flex items-center justify-center text-text-main">
+            <span class="material-symbols-outlined text-lg">call</span>
+          </span>
+          <span class="font-headline font-bold text-xs tracking-wider">[téléphone]</span>
+        </a>
+        <a href="#contact" class="bg-primary hover:bg-primary-hover text-white font-headline font-extrabold text-xs uppercase tracking-widest px-6 py-3.5 transition-colors shadow-sm inline-flex items-center gap-2">
+          <span>Réserver</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN WRAPPER -->
   <main>
-    <!-- 3. Hero: large photo of typical Arras facade / cosy bedroom, title, short tagline, button "Vérifier les disponibilités" -->
-    <section class="relative pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          <div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-6">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-light-secondary-container text-light-on-secondary-container text-label-sm font-label mb-5 border border-sage-light">
-              <span class="material-symbols-outlined text-sm">cottage</span>
-              Maison de famille au cœur historique
-            </span>
 
-            <h1 class="font-headline text-display-lg text-light-on-surface font-bold text-balance mb-6 leading-tight" data-design-text-token="display-lg">
-              Chez Michel — Chambres d&#39;hôtes au cœur d&#39;Arras
-            </h1>
+    <!-- FULL-WIDTH HERO SECTION WITH MOODY WARM-TONED ARRAS FAÇADE -->
+    <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center justify-center overflow-hidden bg-charcoal">
+      <!-- Background Image -->
+      <img src="https://lh3.googleusercontent.com/aida/ALJJyrCshO-zzL9h6DUc-4H_xv2dz2QI6EgIDOvL7UlesWRT3MK8pHPfq9YU_fcicrLFw3TN88NlLYu9cOckf3-jR_jxYWhLDbkC9kmZXCmvdWhEzfr90j1Vn8S47t3laYz-4JqRVgCq64bIdUxa2-dIFUH5khikI7WFXqMWErUgHL7px4PZp-ErgPjnrC4xBffUfFDqSN5U2XARfbJtQdOiGGbb1JN-wgJ6L-1aAQuD1Sh9Iu6GTeB4Z9iA03HDwg" alt="Façades en brique rouge d&#39;Arras au crépuscule" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75 contrast-105">
+      
+      <!-- Charcoal Overlay with warm subtle gradient -->
+      <div class="absolute inset-0 bg-charcoal/65 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/50"></div>
 
-            <p class="font-body text-body-lg text-light-on-surface-variant max-w-xl text-pretty mb-8" data-design-text-token="body-lg">
-              Une parenthèse chaleureuse et raffinée à deux pas des places emblématiques. Venez savourer la douceur de vivre du Nord, l&#39;accueil sincère de notre famille et un petit-déjeuner fait maison aux saveurs du terroir.
-            </p>
+      <!-- Centered Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+        <!-- Label + Short Brick-red Line -->
+        <div class="inline-flex flex-col items-center">
+          <span class="text-cream text-label-md uppercase tracking-[0.25em] font-label font-bold">
+            Arras · Chambres d&#39;hôtes
+          </span>
+          <span class="w-12 h-0.5 bg-primary mt-3"></span>
+        </div>
 
-            <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-              <a href="#contact" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-light-primary text-light-on-primary hover:bg-terracotta-dark transition-colors duration-state-change font-label text-label-lg shadow-sm">
-                <span class="material-symbols-outlined text-lg" aria-hidden="true">calendar_month</span>
-                <span data-design-text-token="label-lg">Vérifier les disponibilités</span>
-              </a>
+        <!-- Huge Bold Cream Title -->
+        <h1 class="text-cream font-headline text-display-lg md:text-[56px] leading-[1.08] font-black uppercase mt-6 tracking-tight">
+          Votre pied-à-terre<br>au cœur d&#39;Arras
+        </h1>
 
-              <a href="#chambres" class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-light-surface-container text-light-on-surface hover:bg-light-surface-variant transition-colors border border-light-outline font-label text-label-lg">
-                <span data-design-text-token="label-lg">Découvrir les chambres</span>
-              </a>
-            </div>
+        <!-- Subtitle -->
+        <p class="text-cream/90 font-body text-body-lg md:text-xl font-light max-w-2xl mx-auto mt-6">
+          Une maison bourgeoise des années 1920 en brique rouge flamande, alliant authenticité, quiétude et confort moderne.
+        </p>
 
-            <!-- Highlights snippet -->
-            <div class="grid grid-cols-3 gap-6 pt-10 mt-10 border-t border-light-outline-variant w-full max-w-lg">
-              <div>
-                <p class="font-headline text-title-lg font-bold text-light-primary tabular-nums">3</p>
-                <p class="font-body text-body-sm text-light-on-surface-variant mt-0.5">Chambres uniques</p>
-              </div>
-              <div>
-                <p class="font-headline text-title-lg font-bold text-light-primary tabular-nums">5 min</p>
-                <p class="font-body text-body-sm text-light-on-surface-variant mt-0.5">À pied du Beffroi</p>
-              </div>
-              <div>
-                <p class="font-headline text-title-lg font-bold text-light-primary tabular-nums">100%</p>
-                <p class="font-body text-body-sm text-light-on-surface-variant mt-0.5">Fait maison</p>
-              </div>
-            </div>
-          </div>
+        <!-- Outlined Cream Button -->
+        <div class="mt-10">
+          <a href="#hebergements" class="inline-block border-2 border-cream text-cream hover:bg-cream hover:text-charcoal font-headline font-bold text-xs uppercase tracking-widest px-8 py-4 transition-all">
+            VOIR LES CHAMBRES &gt;
+          </a>
+        </div>
 
-          <!-- Hero Image -->
-          <div class="lg:col-span-5 relative">
-            <div class="relative rounded-2xl overflow-hidden shadow-lg border border-light-outline-variant bg-light-surface-container aspect-[4/3] lg:aspect-[4/5]">
-              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAAzUBNs8F3mMLd2kTPELh2ioUCxADIoCYuVuicD6DMZFCWi3X_Mafc1w6SBoBG0QlQM6JrKHvYSqiP4iA4MCM1DXCxxR2bq_jduPziHFix73hYCEwLEXG6AT7ERV9DE8o9ZzFgafysZX8CdBnxmAoHCCJ_LDGgpmiaZzn35CNKAQ35xg_G99JWUTK4pkf-4xBo_e3Eg4CoMTYA-6BVhWGwa_rgmXuIV-MjkPXK8MtpK9322CKxILlJWJanQA" alt="Façade typique de la maison d&#39;hôtes Chez Michel à Arras" class="w-full h-full object-cover">
-              <div class="absolute bottom-4 left-4 right-4 bg-light-surface-container-low/95 backdrop-blur-sm p-4 rounded-xl border border-light-outline-variant shadow-sm flex items-center gap-3">
-                <span class="flex items-center justify-center w-10 h-10 rounded-full bg-sage-light text-sage shrink-0">
-                  <span class="material-symbols-outlined">location_on</span>
-                </span>
-                <div>
-                  <p class="font-label text-label-md text-light-on-surface font-semibold">Idéalement situé</p>
-                  <p class="font-body text-body-sm text-light-on-surface-variant">Arras centre historique [62000]</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <!-- Small Carousel Dots Below -->
+        <div class="flex items-center justify-center gap-2.5 mt-12">
+          <button class="w-7 h-1.5 bg-primary" aria-label="Diapositive 1"></button>
+          <button class="w-2 h-1.5 bg-cream/40 hover:bg-cream transition-colors" aria-label="Diapositive 2"></button>
+          <button class="w-2 h-1.5 bg-cream/40 hover:bg-cream transition-colors" aria-label="Diapositive 3"></button>
         </div>
       </div>
     </section>
 
-    <!-- 4. "Nos chambres": 3 cards (photo, room name, capacity, small icons for wifi, private bathroom, breakfast), price "à partir de [XX] € / nuit" -->
-    <section id="chambres" class="py-20 bg-light-surface-container/60 border-y border-light-outline-variant">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- TWO LARGE SIDE-BY-SIDE PROMO TILES (OVERLAPPING HERO) -->
+    <section class="relative z-20 max-w-[1240px] mx-auto px-6 lg:px-12 -mt-16 lg:-mt-24 mb-20" id="studios">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-2xl">
         
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="font-label text-label-sm uppercase tracking-widest text-light-primary font-semibold mb-2 block">Dormir Chez Michel</span>
-          <h2 class="font-headline text-headline-lg text-light-on-surface font-bold text-balance" data-design-text-token="headline-lg">
-            Nos chambres d&#39;hôtes
-          </h2>
-          <p class="font-body text-body-md text-light-on-surface-variant mt-3 text-pretty" data-design-text-token="body-md">
-            Chaque chambre a été pensée comme un cocon paisible mariant le charme des poutres anciennes, le linge de lit d&#39;exception et le confort moderne.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <!-- LEFT TILE: SOLID BRICK RED -->
+        <div class="bg-primary text-cream p-8 md:p-12 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
+          <!-- Inset Rectangular Frame -->
+          <div class="absolute inset-4 md:inset-6 border border-cream/30 pointer-events-none z-10"></div>
           
-          <!-- Card 1 -->
-          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface-container-low rounded-2xl border border-light-outline-variant overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-state-change flex flex-col h-full">
-            <div class="relative w-full h-60 overflow-hidden bg-light-surface-container">
-              <img src="/maquettes/chez-michel/photos/chambre-lit-bois.jpg" alt="Chambre avec lit double en bois – photo Chez Michel" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-              <span class="absolute top-3.5 right-3.5 bg-light-surface-container-low/95 backdrop-blur-xs px-3 py-1 rounded-full text-label-sm font-label text-light-on-surface border border-light-outline-variant shadow-xs">
-                2 personnes
-              </span>
-            </div>
-            
-            <div class="p-6 flex flex-col flex-1">
-              <header class="mb-3">
-                <h3 class="font-headline text-title-lg text-light-on-surface" data-design-text-token="title-lg">Chambre Grand&#39;Place</h3>
-                <p class="text-body-sm text-light-on-surface-variant mt-1" data-design-text-token="body-sm">
-                  Tons chauds terracotta, poutres apparentes et lit King Size pour une escapade romantique.
-                </p>
-              </header>
-
-              <!-- Icons amenities -->
-              <div class="flex items-center gap-3 py-3 border-y border-light-outline-variant/70 my-3 text-body-sm text-light-on-surface-variant">
-                <span class="inline-flex items-center gap-1.5" title="Wifi haut débit">
-                  <span class="material-symbols-outlined text-sage text-base">wifi</span>
-                  <span data-design-text-token="body-sm">Wifi</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5" title="Salle de bain privative">
-                  <span class="material-symbols-outlined text-sage text-base">shower</span>
-                  <span data-design-text-token="body-sm">Bain privé</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5" title="Petit-déjeuner inclus">
-                  <span class="material-symbols-outlined text-sage text-base">bakery_dining</span>
-                  <span data-design-text-token="body-sm">Petit-déj.</span>
-                </span>
-              </div>
-
-              <footer class="mt-auto pt-3 flex items-center justify-between">
-                <div>
-                  <span class="text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">à partir de </span>
-                  <span class="font-headline text-title-lg text-light-primary font-bold tabular-nums" data-design-text-token="title-lg">[XX] €</span>
-                  <span class="text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm"> / nuit</span>
-                </div>
-                <a href="#contact" class="px-4 py-2 rounded-full bg-light-primary text-light-on-primary hover:bg-terracotta-dark font-label text-label-md transition-colors shadow-xs">
-                  <span data-design-text-token="label-md">Réserver</span>
-                </a>
-              </footer>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface-container-low rounded-2xl border border-light-outline-variant overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-state-change flex flex-col h-full">
-            <div class="relative w-full h-60 overflow-hidden bg-light-surface-container">
-              <img src="/maquettes/chez-michel/photos/chambre-rdc.jpg" alt="Chambre du rez-de-chaussée – photo Chez Michel" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-              <span class="absolute top-3.5 right-3.5 bg-light-surface-container-low/95 backdrop-blur-xs px-3 py-1 rounded-full text-label-sm font-label text-light-on-surface border border-light-outline-variant shadow-xs">
-                2 personnes
-              </span>
-            </div>
-            
-            <div class="p-6 flex flex-col flex-1">
-              <header class="mb-3">
-                <h3 class="font-headline text-title-lg text-light-on-surface" data-design-text-token="title-lg">Chambre Le Beffroi</h3>
-                <p class="text-body-sm text-light-on-surface-variant mt-1" data-design-text-token="body-sm">
-                  Nuances sauge reposantes, vue sur les toits d&#39;Arras et calme absolu côté jardin privé.
-                </p>
-              </header>
-
-              <!-- Icons amenities -->
-              <div class="flex items-center gap-3 py-3 border-y border-light-outline-variant/70 my-3 text-body-sm text-light-on-surface-variant">
-                <span class="inline-flex items-center gap-1.5" title="Wifi haut débit">
-                  <span class="material-symbols-outlined text-sage text-base">wifi</span>
-                  <span data-design-text-token="body-sm">Wifi</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5" title="Salle de bain privative">
-                  <span class="material-symbols-outlined text-sage text-base">bathtub</span>
-                  <span data-design-text-token="body-sm">Baignoire</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5" title="Petit-déjeuner inclus">
-                  <span class="material-symbols-outlined text-sage text-base">bakery_dining</span>
-                  <span data-design-text-token="body-sm">Petit-déj.</span>
-                </span>
-              </div>
-
-              <footer class="mt-auto pt-3 flex items-center justify-between">
-                <div>
-                  <span class="text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">à partir de </span>
-                  <span class="font-headline text-title-lg text-light-primary font-bold tabular-nums" data-design-text-token="title-lg">[XX] €</span>
-                  <span class="text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm"> / nuit</span>
-                </div>
-                <a href="#contact" class="px-4 py-2 rounded-full bg-light-primary text-light-on-primary hover:bg-terracotta-dark font-label text-label-md transition-colors shadow-xs">
-                  <span data-design-text-token="label-md">Réserver</span>
-                </a>
-              </footer>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface-container-low rounded-2xl border border-light-outline-variant overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-state-change flex flex-col h-full">
-            <div class="relative w-full h-60 overflow-hidden bg-light-surface-container">
-              <img src="/maquettes/chez-michel/photos/studio-mansarde.jpg" alt="Studio mansardé du 2e étage – photo Chez Michel" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-              <span class="absolute top-3.5 right-3.5 bg-light-surface-container-low/95 backdrop-blur-xs px-3 py-1 rounded-full text-label-sm font-label text-light-on-surface border border-light-outline-variant shadow-xs">
-                Jusqu&#39;à 3 pers.
-              </span>
-            </div>
-            
-            <div class="p-6 flex flex-col flex-1">
-              <header class="mb-3">
-                <h3 class="font-headline text-title-lg text-light-on-surface" data-design-text-token="title-lg">Suite Vauban</h3>
-                <p class="text-body-sm text-light-on-surface-variant mt-1" data-design-text-token="body-sm">
-                  Chambre spacieuse avec mur de pierre blanche, coin salon et possibilité d&#39;un lit d&#39;appoint.
-                </p>
-              </header>
-
-              <!-- Icons amenities -->
-              <div class="flex items-center gap-3 py-3 border-y border-light-outline-variant/70 my-3 text-body-sm text-light-on-surface-variant">
-                <span class="inline-flex items-center gap-1.5" title="Wifi haut débit">
-                  <span class="material-symbols-outlined text-sage text-base">wifi</span>
-                  <span data-design-text-token="body-sm">Wifi</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5" title="Salle de bain privative">
-                  <span class="material-symbols-outlined text-sage text-base">shower</span>
-                  <span data-design-text-token="body-sm">Bain privé</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5" title="Petit-déjeuner inclus">
-                  <span class="material-symbols-outlined text-sage text-base">bakery_dining</span>
-                  <span data-design-text-token="body-sm">Petit-déj.</span>
-                </span>
-              </div>
-
-              <footer class="mt-auto pt-3 flex items-center justify-between">
-                <div>
-                  <span class="text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">à partir de </span>
-                  <span class="font-headline text-title-lg text-light-primary font-bold tabular-nums" data-design-text-token="title-lg">[XX] €</span>
-                  <span class="text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm"> / nuit</span>
-                </div>
-                <a href="#contact" class="px-4 py-2 rounded-full bg-light-primary text-light-on-primary hover:bg-terracotta-dark font-label text-label-md transition-colors shadow-xs">
-                  <span data-design-text-token="label-md">Réserver</span>
-                </a>
-              </footer>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 5. "Le petit-déjeuner": photo + short text about a homemade breakfast with local products -->
-    <section id="petit-dejeuner" class="py-20 lg:py-24">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <!-- Photo -->
-          <div class="lg:col-span-6 order-2 lg:order-1">
-            <div class="relative rounded-2xl overflow-hidden shadow-md border border-light-outline-variant bg-light-surface-container aspect-[4/3]">
-              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDXSjTVGCvqEpuzbX39rPPdg1yl5aQLlHxDLWS1mcFhTZLX4L09VolYlkJCO_D9GhpIS-4XMQzsLeXltm4UbwYBdh0gI3fPOR-BhTDe8ahqzsrSsU3WiinaWL7yp8hp_C5kwK7SzknuJsXdcYON2W6hZTrbsOxYm6OF_At5RB3biUwauVqzgF79Vr8nRS9qnSgqp15ZfmXnz_X8ajdjJ84e3pWHt3qvXf6v61wB3yvnrY1d7DRfSgM0yyU" alt="Petit-déjeuner maison Chez Michel avec viennoiseries et confitures locales" class="w-full h-full object-cover">
-              <div class="absolute top-4 left-4 bg-light-surface-container-low/95 px-3.5 py-1.5 rounded-full text-label-sm font-label text-light-secondary border border-sage-light flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-sm">eco</span>
-                Produits frais &amp; locaux
-              </div>
-            </div>
-          </div>
-
-          <!-- Text -->
-          <div class="lg:col-span-6 order-1 lg:order-2">
-            <span class="font-label text-label-sm uppercase tracking-widest text-light-secondary font-semibold mb-2 block">Chaque matin entre 8h et 10h</span>
-            <h2 class="font-headline text-headline-lg text-light-on-surface font-bold mb-6 text-balance" data-design-text-token="headline-lg">
-              Le petit-déjeuner gourmand &amp; maison
+          <div class="relative z-20 max-w-sm">
+            <span class="text-cream/70 text-label-sm uppercase tracking-widest font-label block mb-3">Séjours autonomes &amp; professionnels</span>
+            <!-- Big Bold Headline on 3 lines -->
+            <h2 class="font-headline font-extrabold text-headline-lg text-cream uppercase leading-[1.1] mb-6">
+              Studios<br>meublés tout<br>équipés.
             </h2>
-            
-            <p class="font-body text-body-md text-light-on-surface-variant mb-4" data-design-text-token="body-md">
-              Chaque matinée commence dans la véranda baignée de soleil ou dans notre salle à manger aux poutres chaleureuses. Michel prépare avec passion un généreux buffet composé de gâteaux familiaux, brioches tièdes, confitures de fruits du jardin et pains frais de notre artisan boulanger arrasien.
+            <p class="text-cream/80 text-sm font-light leading-relaxed mb-6">
+              Espaces privatifs avec kitchenette indépendante, bureau de travail, literie haut de gamme et vue sur les cours intérieures.
             </p>
-            <p class="font-body text-body-md text-light-on-surface-variant mb-6" data-design-text-token="body-md">
-              Nous mettons à l&#39;honneur les trésors du Pas-de-Calais : fromages fermiers de la région, beurre d&#39;artisan, jus de pommes d&#39;arboriculteurs voisins et sélection de thés fins ou café torréfié localement.
-            </p>
-
-            <ul class="space-y-3 font-body text-body-sm text-light-on-surface">
-              <li class="flex items-center gap-3">
-                <span class="w-6 h-6 rounded-full bg-light-secondary-container text-light-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-sm">check</span>
-                </span>
-                <span>Inclus sans supplément pour toutes nos réservations de chambres</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-6 h-6 rounded-full bg-light-secondary-container text-light-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-sm">check</span>
-                </span>
-                <span>Options sans gluten et végétariennes préparées sur simple demande</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-6 h-6 rounded-full bg-light-secondary-container text-light-secondary flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-sm">check</span>
-                </span>
-                <span>Conseils personnalisés de vos hôtes pour visiter la ville</span>
-              </li>
-            </ul>
           </div>
 
+          <!-- Photo bleeding out of the frame on the right -->
+          <div class="absolute -right-8 bottom-4 w-48 sm:w-60 md:w-64 h-52 sm:h-64 z-10 shadow-lg border-2 border-white/20 hidden sm:block">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrBsdiPNL23d79DuVpdgMNuZr9S1m9rgdfMzigJRXb0VIHwyDRkd6kFBf1KWLcT172VyNW4jxVpKv_jKxmdnCyrGJCwlD2J0oJj0LwdzCE3gWHlspx5GpvIm-jtEdYmonrhtWQgFBAL1fne08id69R14C8gWCRGkiszRp4eGsQheIJI31AW0rzp6asrXFNHdh15HDxI3nGxqWR-c9eBpyt4GfjTFE5A9q6Y7tpJQqArmI6RH203H51UX_8DRaFCif88" alt="Intérieur d&#39;un studio Chez Michel" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Bottom Links -->
+          <div class="relative z-20 pt-6 border-t border-cream/20 flex flex-wrap items-center gap-6 text-label-md uppercase tracking-wider font-label">
+            <a href="#hebergements" class="text-cream font-bold hover:underline inline-flex items-center gap-1.5">
+              VOIR LES STUDIOS <span class="text-xs">&gt;</span>
+            </a>
+            <a href="#tarifs" class="text-cream/80 hover:text-white inline-flex items-center gap-1.5">
+              TARIFS <span class="text-xs">&gt;</span>
+            </a>
+          </div>
         </div>
+
+        <!-- RIGHT TILE: LIGHT SAND -->
+        <div class="bg-sand text-text-main p-8 md:p-12 relative overflow-hidden flex flex-col justify-between min-h-[380px]">
+          <!-- Inset Rectangular Frame -->
+          <div class="absolute inset-4 md:inset-6 border border-text-main/20 pointer-events-none z-10"></div>
+          
+          <div class="relative z-20 max-w-sm">
+            <span class="text-text-main/60 text-label-sm uppercase tracking-widest font-label block mb-3">Charme &amp; accessibilité</span>
+            <!-- Big Bold Headline on 3 lines -->
+            <h2 class="font-headline font-extrabold text-headline-lg text-text-main uppercase leading-[1.1] mb-6">
+              La chambre<br>du rez-de-<br>chaussée.
+            </h2>
+            <p class="text-text-main/80 text-sm font-light leading-relaxed mb-6">
+              Baignée de lumière douce, murs de briques d&#39;origine et accès aisé sans escalier. Idéale pour une étape reposante à deux pas du centre historique.
+            </p>
+          </div>
+
+          <!-- Photo bleeding out of the frame on the right -->
+          <div class="absolute -right-8 bottom-4 w-48 sm:w-60 md:w-64 h-52 sm:h-64 z-10 shadow-lg border-2 border-text-main/10 hidden sm:block">
+            <img src="/maquettes/chez-michel/photos/chambre-rdc.jpg" alt="Chambre du rez-de-chaussée – photo Chez Michel" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Bottom Link -->
+          <div class="relative z-20 pt-6 border-t border-text-main/20 flex items-center gap-6 text-label-md uppercase tracking-wider font-label">
+            <a href="#hebergements" class="text-primary font-bold hover:text-primary-hover inline-flex items-center gap-1.5">
+              DÉCOUVRIR <span class="text-xs">&gt;</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- 6. "Tarifs": simple, clean pricing table (1 person, 2 persons, extra bed) -->
-    <section id="tarifs" class="py-20 bg-light-surface-container/60 border-y border-light-outline-variant">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <!-- SECTION: NOS HÉBERGEMENTS -->
+    <section class="py-16 bg-cream border-t border-sand" id="hebergements">
+      <div class="max-w-[1240px] mx-auto px-6 lg:px-12" id="chambres">
         
-        <div class="text-center mb-12">
-          <span class="font-label text-label-sm uppercase tracking-widest text-light-primary font-semibold mb-2 block">Transparence &amp; simplicité</span>
-          <h2 class="font-headline text-headline-lg text-light-on-surface font-bold text-balance" data-design-text-token="headline-lg">
-            Tarifs de nos séjours
-          </h2>
-          <p class="font-body text-body-md text-light-on-surface-variant mt-3 text-pretty" data-design-text-token="body-md">
-            Des prix clairs, toutes taxes incluses, comprenant la nuitée et le petit-déjeuner complet fait maison.
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-primary pb-4">
+          <div>
+            <span class="text-primary text-label-sm uppercase tracking-widest font-label font-bold block mb-1">Nos espaces de repos</span>
+            <h2 class="text-headline-lg font-headline font-black uppercase text-text-main tracking-tight">Nos hébergements</h2>
+          </div>
+          <p class="text-text-main/70 text-sm max-w-md mt-4 md:mt-0 font-body">
+            Trois configurations pensées pour les courts séjours touristiques comme pour les résidences prolongées à Arras.
           </p>
         </div>
 
-        <div class="bg-light-surface-container-low rounded-2xl border border-light-outline-variant overflow-hidden shadow-sm">
-          <table class="w-full text-left border-collapse" data-component-id="table-standard" data-component-type="table" data-component-variant="standard">
+        <!-- 3 Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Card 1: Studette 1er étage -->
+          <article class="bg-sand border border-light-outline flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="relative h-60 overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBByciX_xJhTLyTQolYHzQHWnQDsLCcT7OlKiNz3Abldts6zoU8YSKeEH4O1cz6ilR1y13mjIctYwJtrSHay-XJv1ynJaxlfzlyo0iUfK_v-fzZNrVYS1s4WItO7RCPnC5uWs8Z5s6JQQz2oqhvj_NWRaTiUDiW0n3rwH5cwu5__0Qs_yiuQ-jZzCYL_01c7XNB-xVA4sEYplS8D-cUffGUximiil2WEfRDE2CBDd5oJATeYavrBQ_mc4E" alt="Studette 1er étage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-4 left-4 bg-charcoal text-cream text-[11px] font-label font-bold uppercase tracking-wider px-3 py-1">
+                  1er étage
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between text-xs text-text-main/60 uppercase font-label tracking-wider mb-2">
+                  <span>Chambre &amp; kitchenette</span>
+                  <span class="flex items-center gap-1 font-bold text-text-main">
+                    <span class="material-symbols-outlined text-sm">person</span> 1 personne
+                  </span>
+                </div>
+                <h3 class="font-headline font-bold text-headline-sm text-text-main mb-3 uppercase">Studette 1er étage</h3>
+                <p class="text-sm text-text-main/75 mb-6 leading-relaxed">
+                  Idéale pour étudiants, stagiaires ou voyageurs solos en quête de tranquillité. Lit simple confortable et bureau lumineux.
+                </p>
+                <!-- Sage-green icons -->
+                <div class="flex items-center gap-4 text-xs text-text-main/80 pt-4 border-t border-text-main/10">
+                  <div class="flex items-center gap-1.5" title="Connexion Wifi haut débit">
+                    <span class="material-symbols-outlined text-sage text-base">wifi</span>
+                    <span>Wifi</span>
+                  </div>
+                  <div class="flex items-center gap-1.5" title="Coin cuisine équipé">
+                    <span class="material-symbols-outlined text-sage text-base">countertops</span>
+                    <span>Coin cuisine</span>
+                  </div>
+                  <div class="flex items-center gap-1.5" title="Salle d&#39;eau privative">
+                    <span class="material-symbols-outlined text-sage text-base">shower</span>
+                    <span>Salle d&#39;eau</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-4">
+              <div class="flex items-center justify-between border-t border-text-main/10 pt-4">
+                <div>
+                  <span class="text-xs text-text-main/60 block">Tarif indicatif</span>
+                  <span class="text-primary font-headline font-extrabold text-lg">à partir de [XX] € / nuit</span>
+                </div>
+                <a href="#contact" class="bg-primary hover:bg-primary-hover text-white text-xs font-headline font-bold uppercase tracking-wider px-4 py-2.5 transition-colors">
+                  Réserver
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Studio 1er étage -->
+          <article class="bg-sand border border-light-outline flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="relative h-60 overflow-hidden">
+                <img src="/maquettes/chez-michel/photos/chambre-lit-bois.jpg" alt="Studio du 1er étage – photo Chez Michel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-4 left-4 bg-primary text-cream text-[11px] font-label font-bold uppercase tracking-wider px-3 py-1">
+                  Coup de cœur
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between text-xs text-text-main/60 uppercase font-label tracking-wider mb-2">
+                  <span>Studio meublé</span>
+                  <span class="flex items-center gap-1 font-bold text-text-main">
+                    <span class="material-symbols-outlined text-sm">group</span> 1 à 2 personnes
+                  </span>
+                </div>
+                <h3 class="font-headline font-bold text-headline-sm text-text-main mb-3 uppercase">Studio 1er étage</h3>
+                <p class="text-sm text-text-main/75 mb-6 leading-relaxed">
+                  Superbe volume avec belle hauteur sous plafond, parquet massif d&#39;époque, coin repas et kitchenette entièrement équipée.
+                </p>
+                <!-- Sage-green icons -->
+                <div class="flex items-center gap-4 text-xs text-text-main/80 pt-4 border-t border-text-main/10">
+                  <div class="flex items-center gap-1.5" title="Connexion Wifi haut débit">
+                    <span class="material-symbols-outlined text-sage text-base">wifi</span>
+                    <span>Wifi</span>
+                  </div>
+                  <div class="flex items-center gap-1.5" title="Coin cuisine équipé">
+                    <span class="material-symbols-outlined text-sage text-base">countertops</span>
+                    <span>Coin cuisine</span>
+                  </div>
+                  <div class="flex items-center gap-1.5" title="Salle d&#39;eau privative">
+                    <span class="material-symbols-outlined text-sage text-base">shower</span>
+                    <span>Salle d&#39;eau</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-4">
+              <div class="flex items-center justify-between border-t border-text-main/10 pt-4">
+                <div>
+                  <span class="text-xs text-text-main/60 block">Tarif indicatif</span>
+                  <span class="text-primary font-headline font-extrabold text-lg">à partir de [XX] € / nuit</span>
+                </div>
+                <a href="#contact" class="bg-primary hover:bg-primary-hover text-white text-xs font-headline font-bold uppercase tracking-wider px-4 py-2.5 transition-colors">
+                  Réserver
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Studio 2e étage -->
+          <article class="bg-sand border border-light-outline flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="relative h-60 overflow-hidden">
+                <img src="/maquettes/chez-michel/photos/studio-mansarde.jpg" alt="Studio mansardé du 2e étage – photo Chez Michel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-4 left-4 bg-charcoal text-cream text-[11px] font-label font-bold uppercase tracking-wider px-3 py-1">
+                  2e étage sous combles
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between text-xs text-text-main/60 uppercase font-label tracking-wider mb-2">
+                  <span>Studio mansardé</span>
+                  <span class="flex items-center gap-1 font-bold text-text-main">
+                    <span class="material-symbols-outlined text-sm">group</span> 1 à 2 personnes
+                  </span>
+                </div>
+                <h3 class="font-headline font-bold text-headline-sm text-text-main mb-3 uppercase">Studio 2e étage</h3>
+                <p class="text-sm text-text-main/75 mb-6 leading-relaxed">
+                  Ambiance feutrée sous charpente apparente. Espace salon intime, vue sur les toits arrageois et tranquillité absolue.
+                </p>
+                <!-- Sage-green icons -->
+                <div class="flex items-center gap-4 text-xs text-text-main/80 pt-4 border-t border-text-main/10">
+                  <div class="flex items-center gap-1.5" title="Connexion Wifi haut débit">
+                    <span class="material-symbols-outlined text-sage text-base">wifi</span>
+                    <span>Wifi</span>
+                  </div>
+                  <div class="flex items-center gap-1.5" title="Coin cuisine équipé">
+                    <span class="material-symbols-outlined text-sage text-base">countertops</span>
+                    <span>Coin cuisine</span>
+                  </div>
+                  <div class="flex items-center gap-1.5" title="Salle d&#39;eau privative">
+                    <span class="material-symbols-outlined text-sage text-base">shower</span>
+                    <span>Salle d&#39;eau</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-4">
+              <div class="flex items-center justify-between border-t border-text-main/10 pt-4">
+                <div>
+                  <span class="text-xs text-text-main/60 block">Tarif indicatif</span>
+                  <span class="text-primary font-headline font-extrabold text-lg">à partir de [XX] € / nuit</span>
+                </div>
+                <a href="#contact" class="bg-primary hover:bg-primary-hover text-white text-xs font-headline font-bold uppercase tracking-wider px-4 py-2.5 transition-colors">
+                  Réserver
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TARIFS (Clean table with bold numbers) -->
+    <section class="py-16 bg-cream border-t border-sand" id="tarifs">
+      <div class="max-w-[1240px] mx-auto px-6 lg:px-12">
+        
+        <div class="max-w-3xl mb-10">
+          <span class="text-primary text-label-sm uppercase tracking-widest font-label font-bold block mb-1">Clarté &amp; flexibilité</span>
+          <h2 class="text-headline-lg font-headline font-black uppercase text-text-main tracking-tight">Grille des tarifs</h2>
+          <p class="text-text-main/70 text-body-md mt-2 font-body">
+            Formules à la nuitée, forfaits hebdomadaires et baux mensuels adaptés aux séjours d&#39;affaires, universitaires ou de villégiature.
+          </p>
+        </div>
+
+        <!-- Clean Table with Bold Numbers -->
+        <div class="border border-text-main/20 bg-cream overflow-x-auto shadow-sm">
+          <table class="w-full text-left border-collapse">
             <thead>
-              <tr class="bg-light-surface-container border-b border-light-outline-variant">
-                <th scope="col" class="py-4 px-6 font-label text-label-md text-light-on-surface">
-                  <span data-design-text-token="label-md">Formule &amp; Capacité</span>
-                </th>
-                <th scope="col" class="py-4 px-6 font-label text-label-md text-light-on-surface hidden sm:table-cell">
-                  <span data-design-text-token="label-md">Prestations incluses</span>
-                </th>
-                <th scope="col" class="py-4 px-6 font-label text-label-md text-light-primary text-right">
-                  <span data-design-text-token="label-md">Tarif par nuit</span>
-                </th>
+              <tr class="bg-charcoal text-cream text-label-sm uppercase tracking-wider font-label border-b border-charcoal">
+                <th class="p-5 font-bold">Hébergement</th>
+                <th class="p-5 font-bold">Capacité</th>
+                <th class="p-5 font-bold text-right">À la nuitée</th>
+                <th class="p-5 font-bold text-right">À la semaine</th>
+                <th class="p-5 font-bold text-right">Au mois (étudiants / pro)</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-light-outline-variant font-body">
-              <tr class="hover:bg-light-surface-container/40 transition-colors">
-                <td class="py-5 px-6">
-                  <p class="font-headline text-title-md text-light-on-surface font-semibold" data-design-text-token="title-md">1 personne</p>
-                  <p class="text-body-sm text-light-on-surface-variant sm:hidden mt-0.5">Chambre individuelle &amp; petit-déj.</p>
+            <tbody class="divide-y divide-text-main/10 font-body text-sm">
+              <tr class="hover:bg-sand/40 transition-colors">
+                <td class="p-5 font-headline font-bold text-text-main uppercase">
+                  Studette 1er étage
+                  <span class="block text-xs font-normal text-text-main/60 normal-case">Lit simple · Bureau · Kitchenette</span>
                 </td>
-                <td class="py-5 px-6 text-body-sm text-light-on-surface-variant hidden sm:table-cell" data-design-text-token="body-sm">
-                  Chambre privative, lit double ou simple, salle de bain privée, petit-déjeuner maison et accès wifi.
-                </td>
-                <td class="py-5 px-6 text-right">
-                  <span class="font-headline text-title-lg text-light-on-surface font-bold tabular-nums" data-design-text-token="title-lg">[XX] €</span>
-                  <span class="block text-xs text-light-on-surface-variant">TTC / nuit</span>
-                </td>
+                <td class="p-5 text-text-main/80">1 personne</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-primary tabular-nums">[XX] €</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-text-main tabular-nums">[XXX] €</td>
+                <td class="p-5 text-right font-headline font-black text-lg text-primary tabular-nums">[XXX] € / mois</td>
               </tr>
-
-              <tr class="hover:bg-light-surface-container/40 transition-colors">
-                <td class="py-5 px-6">
-                  <p class="font-headline text-title-md text-light-on-surface font-semibold" data-design-text-token="title-md">2 personnes</p>
-                  <p class="text-body-sm text-light-on-surface-variant sm:hidden mt-0.5">Chambre double &amp; 2 petits-déj.</p>
+              <tr class="hover:bg-sand/40 transition-colors">
+                <td class="p-5 font-headline font-bold text-text-main uppercase">
+                  Studio 1er étage
+                  <span class="block text-xs font-normal text-text-main/60 normal-case">Grand lit double · Cuisine complète · Coin salon</span>
                 </td>
-                <td class="py-5 px-6 text-body-sm text-light-on-surface-variant hidden sm:table-cell" data-design-text-token="body-sm">
-                  Chambre double (Grand&#39;Place ou Le Beffroi), lit Queen/King Size, 2 petits-déjeuners gourmands inclus.
-                </td>
-                <td class="py-5 px-6 text-right">
-                  <span class="font-headline text-title-lg text-light-on-surface font-bold tabular-nums" data-design-text-token="title-lg">[XX] €</span>
-                  <span class="block text-xs text-light-on-surface-variant">TTC / nuit</span>
-                </td>
+                <td class="p-5 text-text-main/80">1 à 2 personnes</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-primary tabular-nums">[XX] €</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-text-main tabular-nums">[XXX] €</td>
+                <td class="p-5 text-right font-headline font-black text-lg text-primary tabular-nums">[XXX] € / mois</td>
               </tr>
-
-              <tr class="hover:bg-light-surface-container/40 transition-colors">
-                <td class="py-5 px-6">
-                  <p class="font-headline text-title-md text-light-on-surface font-semibold" data-design-text-token="title-md">Lit supplémentaire</p>
-                  <p class="text-body-sm text-light-on-surface-variant sm:hidden mt-0.5">Enfant ou adulte d&#39;appoint</p>
+              <tr class="hover:bg-sand/40 transition-colors">
+                <td class="p-5 font-headline font-bold text-text-main uppercase">
+                  Studio 2e étage
+                  <span class="block text-xs font-normal text-text-main/60 normal-case">Sous combles · Poutres apparentes · Baignoire</span>
                 </td>
-                <td class="py-5 px-6 text-body-sm text-light-on-surface-variant hidden sm:table-cell" data-design-text-token="body-sm">
-                  Disponible dans la Suite Vauban pour un enfant ou un accompagnant, petit-déjeuner inclus.
+                <td class="p-5 text-text-main/80">1 à 2 personnes</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-primary tabular-nums">[XX] €</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-text-main tabular-nums">[XXX] €</td>
+                <td class="p-5 text-right font-headline font-black text-lg text-primary tabular-nums">[XXX] € / mois</td>
+              </tr>
+              <tr class="hover:bg-sand/40 transition-colors">
+                <td class="p-5 font-headline font-bold text-text-main uppercase">
+                  Chambre du rez-de-chaussée
+                  <span class="block text-xs font-normal text-text-main/60 normal-case">Accès de plain-pied · Salle d&#39;eau spacieuse</span>
                 </td>
-                <td class="py-5 px-6 text-right">
-                  <span class="font-headline text-title-lg text-light-on-surface font-bold tabular-nums" data-design-text-token="title-lg">[XX] €</span>
-                  <span class="block text-xs text-light-on-surface-variant">TTC / nuit</span>
-                </td>
+                <td class="p-5 text-text-main/80">2 personnes</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-primary tabular-nums">[XX] €</td>
+                <td class="p-5 text-right font-headline font-extrabold text-base text-text-main tabular-nums">[XXX] €</td>
+                <td class="p-5 text-right font-headline font-black text-lg text-primary tabular-nums">—</td>
               </tr>
             </tbody>
           </table>
+        </div>
 
-          <div class="p-4 bg-sand-light/50 border-t border-light-outline-variant text-center text-body-sm text-light-on-surface-variant">
-            <span>Taxe de séjour en sus : <strong>[X,XX] €</strong> par nuit et par personne majeure · Arrivée dès 16h, départ jusqu&#39;à 11h.</span>
+        <!-- Note on long stays for students -->
+        <div class="mt-6 bg-sand border-l-4 border-primary p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-2xl">school</span>
+            <div>
+              <h4 class="font-headline font-bold text-sm uppercase text-text-main">Accueil des étudiants &amp; séjours longue durée</h4>
+              <p class="text-xs text-text-main/80 mt-0.5">
+                Baux de stage et forfaits universitaires disponibles avec charges, eau, électricité et Wifi inclus. Contactez-nous pour un devis personnalisé.
+              </p>
+            </div>
           </div>
+          <a href="#contact" class="bg-charcoal hover:bg-black text-cream text-xs font-headline font-bold uppercase tracking-wider px-5 py-2.5 transition-colors whitespace-nowrap self-start sm:self-center">
+            Demander un devis
+          </a>
         </div>
 
       </div>
     </section>
 
-    <!-- 7. "À découvrir autour": 4 small cards — Grand'Place, Beffroi d'Arras, Carrière Wellington, Citadelle Vauban -->
-    <section id="decouvrir" class="py-20 lg:py-24">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- SECTION: LE QUARTIER (4 cards) -->
+    <section class="py-16 bg-sand/50 border-t border-sand" id="quartier">
+      <div class="max-w-[1240px] mx-auto px-6 lg:px-12">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-primary pb-4">
           <div>
-            <span class="font-label text-label-sm uppercase tracking-widest text-light-secondary font-semibold mb-2 block">Patrimoine &amp; Histoire</span>
-            <h2 class="font-headline text-headline-lg text-light-on-surface font-bold text-balance" data-design-text-token="headline-lg">
-              À découvrir autour de Chez Michel
-            </h2>
+            <span class="text-primary text-label-sm uppercase tracking-widest font-label font-bold block mb-1">Situation privilégiée</span>
+            <h2 class="text-headline-lg font-headline font-black uppercase text-text-main tracking-tight">Le quartier</h2>
           </div>
-          <p class="font-body text-body-sm text-light-on-surface-variant max-w-md mt-4 md:mt-0" data-design-text-token="body-sm">
-            Notre maison est idéalement située pour explorer à pied ou à vélo les plus beaux trésors d&#39;Arras et du Pays d&#39;Artois.
+          <p class="text-text-main/70 text-sm max-w-md mt-4 md:mt-0 font-body">
+            Entre histoire mémorielle, espaces de promenade verdoyants et effervescence du centre piétonnier d&#39;Arras.
           </p>
         </div>
 
+        <!-- 4 Cards Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- 1. Grand'Place -->
-          <article data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-container-low rounded-xl border border-light-outline-variant overflow-hidden shadow-xs hover:border-terracotta hover:shadow-sm transition-all duration-state-change flex flex-col">
-            <div class="w-full h-44 overflow-hidden bg-light-surface-container">
-              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBW5elDHdvQe_MpP3jYJa1VOa7hoe49Cf45VN7JK6sGTlgwfFoCPduvKl7nbTCxK259agNdd00_CF0KxrWyanXE61gvoMXiaKKSD8tuXy3OBcTl1Q0YuVGUjc5ypD3mVpj_VEA_72TaGiD6z6z9L9lRuJffmuUY2vETNBE7XNhg08xSJXGKDtZDxXHi2SUd_u6lNJbZ-nFPhIXDGugkcZcKeTrOleUT8RaLjmZOTs8cBq4Q_dy114sYDzOM" alt="Grand&#39;Place d&#39;Arras avec ses façades flamandes baroques" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <!-- Card 1: Carrière Wellington -->
+          <div class="bg-cream border border-light-outline overflow-hidden flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrApTHTKr7SDC3u2QOJze-0w2J_F_djdjP06pbvJmVUpYZLEhPnrrbjCoLvUpLVzrzzE2bHFZ3NkQQgiVkIVkMHy1hriS0bCfOntudUFS6MVEIuENy7LUl9KIbceFyO22LeDka4d10l6CfgKvWY_4waROfPDYtQJdggrVkI1fVrRjquIsH4J9F6YKsc8u0l9E6SyQ6yliStUi_BnNEZmaP7Mh3IDXEm_hYyp5EfgMy5BdMdaoE2GTFznZOxOaNw" alt="Carrière Wellington à Arras" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 left-3 bg-primary text-white text-[10px] font-label font-bold uppercase tracking-widest px-2.5 py-1">
+                  À deux pas
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1.5 text-sage text-xs font-label font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-base">museum</span>
+                  <span>Site mémoriel majeur</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-text-main uppercase mb-2">Carrière Wellington</h3>
+                <p class="text-xs text-text-main/75 leading-relaxed">
+                  Réseau souterrain exceptionnel creusé par les tunneliers néo-zélandais lors de la Grande Guerre. Musée et visites guidées au bout de notre rue.
+                </p>
+              </div>
             </div>
-            <div class="p-5 flex flex-col flex-1">
-              <span class="font-label text-label-sm text-light-primary font-semibold mb-1">À 5 min à pied</span>
-              <h3 class="font-headline text-title-md text-light-on-surface font-semibold mb-1.5" data-design-text-token="title-md">Grand&#39;Place</h3>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed" data-design-text-token="body-sm">
-                Les 155 façades de style baroque flamand uniques en Europe et les terrasses de café animées.
-              </p>
+            <div class="p-5 pt-0 text-[11px] font-label font-bold text-primary uppercase tracking-wider">
+              À 2 minutes à pied
             </div>
-          </article>
+          </div>
 
-          <!-- 2. Beffroi d'Arras -->
-          <article data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-container-low rounded-xl border border-light-outline-variant overflow-hidden shadow-xs hover:border-terracotta hover:shadow-sm transition-all duration-state-change flex flex-col">
-            <div class="w-full h-44 overflow-hidden bg-light-surface-container">
-              <img src="https://lh3.googleusercontent.com/aida/ALJJyrC_g8JV61Qg9dIKeo_MRv15UPOtkR1VVtGOnRT9BQtgJoFaGfx_CCstorbek_fVYXQXKOsB2WFecwDY1_dnkPeK6B-1IJe9FBhNuCTbU7175p0d_wCNVYwV7gEfGtFyahgkgOtxbELGywWNdq10AN2SOlJPrLKZYg3HA6n4PUOEUDdZcdxr1uokZpjS4m6OiRWmQBFmgMIulCdg4oe7q6YpYMcVSh80ssC3DwRQEBEO6dmyp6VXAA" alt="Beffroi d&#39;Arras classé UNESCO" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <!-- Card 2: Jardins du Riez -->
+          <div class="bg-cream border border-light-outline overflow-hidden flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCR39KakrmsLDPIEmYOiKaWfFe9SckGFlYeQLMEcn3rV35w7mSFu_-Sjd6IDljuOFAqcscHbYEW0TsBW-GhmPo3E3g2SpEHAwU2EB2h6pNIzmqNX0j3Qafnul69XJyypWlOoiiTfrqCXGE7NBiPkGfTyUngdduWatvVVVW8wIXXk5QyYQiwgHnTbH9-2EuWLxWMWoOwb56A6dqzdbIWy2XtTheirJJGOFm9zK6TUGR7wqHcZVTAa4In2kpsZUGfaQ" alt="Jardins du Riez" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 left-3 bg-charcoal text-white text-[10px] font-label font-bold uppercase tracking-widest px-2.5 py-1">
+                  Nature &amp; détente
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1.5 text-sage text-xs font-label font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-base">park</span>
+                  <span>Parc arboré</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-text-main uppercase mb-2">Jardins du Riez</h3>
+                <p class="text-xs text-text-main/75 leading-relaxed">
+                  Poumon de verdure propice à la lecture et au jogging matinal, traversé de sentiers ombragés bordés de saules et de pelouses soignées.
+                </p>
+              </div>
             </div>
-            <div class="p-5 flex flex-col flex-1">
-              <span class="font-label text-label-sm text-light-primary font-semibold mb-1">À 7 min à pied</span>
-              <h3 class="font-headline text-title-md text-light-on-surface font-semibold mb-1.5" data-design-text-token="title-md">Beffroi d&#39;Arras</h3>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed" data-design-text-token="body-sm">
-                Joyau gothique flamboyant classé au patrimoine mondial de l&#39;UNESCO avec un panorama à 360°.
-              </p>
+            <div class="p-5 pt-0 text-[11px] font-label font-bold text-primary uppercase tracking-wider">
+              À 5 minutes à pied
             </div>
-          </article>
+          </div>
 
-          <!-- 3. Carrière Wellington -->
-          <article data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-container-low rounded-xl border border-light-outline-variant overflow-hidden shadow-xs hover:border-terracotta hover:shadow-sm transition-all duration-state-change flex flex-col">
-            <div class="w-full h-44 overflow-hidden bg-light-surface-container">
-              <img src="https://lh3.googleusercontent.com/aida/ALJJyrB0dTpypLM9NhrwHEHkkSP2xyiApDa8YCNEfelMiyylLT09xAVo2AGryJVhQBGXZIxquFppA14Rjebuzm9hjgvxR3gPt6h555HeA2tAg2-qrBZdblHwM2WjFuuz3YR29bykXIKVHG4hj1qt6iWoKBnbX78NJQ1GhyTzykwHXLVA7U1pY4tpUO-5YujVqLlkiqZ0wXqpA2n1mdjMfBOTggbmqi0c9LAXfUxLApCxjOC8fOv-Hyd4HHSBUI2rkyekAKzh5Yw" alt="Carrière Wellington mémorial sous terre" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <!-- Card 3: Grand'Place -->
+          <div class="bg-cream border border-light-outline overflow-hidden flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBO2XhflFmPMR_xFPim6Z-qLwbl3kzVyGzPDcrsOdeTSp93MtUoXmdLN9Y-4VDBVU7lTGm-uh33LpDUe4RXbMBXq7FNF6Lt0-iDuDosH_ZdaTTiNlmUhT3RuitJOEJTLY93DwRVY9zKsOao3sULcXKe1a560JItHnfoiXXICP1HEsbxnOQckKrmwxQ3KX4Kbwxki61Dy-MMNJzibbiWZU1sOT7OBuFGC0DUiE261B-OaggbAossLOCpglfD7fcV" alt="Grand&#39;Place d&#39;Arras" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 left-3 bg-charcoal text-white text-[10px] font-label font-bold uppercase tracking-widest px-2.5 py-1">
+                  Cœur battant
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1.5 text-sage text-xs font-label font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-base">storefront</span>
+                  <span>Patrimoine baroque</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-text-main uppercase mb-2">Grand&#39;Place d&#39;Arras</h3>
+                <p class="text-xs text-text-main/75 leading-relaxed">
+                  L&#39;un des ensembles baroques flamands les plus spectaculaires d&#39;Europe. Terrasses animées, beffroi classé UNESCO et commerces.
+                </p>
+              </div>
             </div>
-            <div class="p-5 flex flex-col flex-1">
-              <span class="font-label text-label-sm text-light-primary font-semibold mb-1">À 15 min à pied</span>
-              <h3 class="font-headline text-title-md text-light-on-surface font-semibold mb-1.5" data-design-text-token="title-md">Carrière Wellington</h3>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed" data-design-text-token="body-sm">
-                Réseau de galeries souterraines creusé par les mineurs néo-zélandais lors de la bataille de 1917.
-              </p>
+            <div class="p-5 pt-0 text-[11px] font-label font-bold text-primary uppercase tracking-wider">
+              15 minutes à pied
             </div>
-          </article>
+          </div>
 
-          <!-- 4. Citadelle Vauban -->
-          <article data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-container-low rounded-xl border border-light-outline-variant overflow-hidden shadow-xs hover:border-terracotta hover:shadow-sm transition-all duration-state-change flex flex-col">
-            <div class="w-full h-44 overflow-hidden bg-light-surface-container">
-              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAAGnety-JpoJOaRzKGjdbyE7iRVU7lXYQuh1u8Yzq5tuYu4UjRyKPuXfA5IgrAt4_Cr88d1HvlHbFihrYnyM1_4b0tMDz4VWgJMHZQ4Jfs7pgrvh5GyAnaFbdOZ-6ERA9MXtYDZ6WH9OtYI_WUToNZJaB_mvf5NEdt1D2YtgOXrxhEZmd8sBInIW_EsVeZlEzG2AlnRDufdnJKpFCe0-fHJvRr1IHBYipT8XW7bXTL06SiCOExtEZIxA" alt="Citadelle Vauban entourée d&#39;espaces verts" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <!-- Card 4: Gare TGV -->
+          <div class="bg-cream border border-light-outline overflow-hidden flex flex-col justify-between group hover:border-primary transition-colors">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCMMxL2M-dHI5BFEvwGtS3VoLEb-YecdWE3CIcQ7rCKO_1pxUDq5wyMqPlj1VJhQt1q1gjH0-NFIIpmHX4dFKItSL3KS-w8pGkJPY3TJUp7AobIr6fDriKs7cwHq9Lb4ES6Z0JkTvEuyMNuR_3_jIfCkXKNV6GQQn8o-bDYtNRpNcWz256bm6DICBnAQjPUT4XYVHVb8uXcKr30YZ8WBw6hUXLTae5wqZXpZCEdSl_enf5_6v4TLz9c0KeXBQ" alt="Gare TGV d&#39;Arras" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 left-3 bg-charcoal text-white text-[10px] font-label font-bold uppercase tracking-widest px-2.5 py-1">
+                  Connexion rapide
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1.5 text-sage text-xs font-label font-bold uppercase tracking-wider mb-2">
+                  <span class="material-symbols-outlined text-base">train</span>
+                  <span>Mobilité nationale</span>
+                </div>
+                <h3 class="font-headline font-bold text-base text-text-main uppercase mb-2">Gare TGV d&#39;Arras</h3>
+                <p class="text-xs text-text-main/75 leading-relaxed">
+                  Liaisons directes : Paris Gare du Nord en 50 minutes, Lille en 20 minutes, Bruxelles et Londres via Lille Europe.
+                </p>
+              </div>
             </div>
-            <div class="p-5 flex flex-col flex-1">
-              <span class="font-label text-label-sm text-light-primary font-semibold mb-1">À 10 min en vélo</span>
-              <h3 class="font-headline text-title-md text-light-on-surface font-semibold mb-1.5" data-design-text-token="title-md">Citadelle Vauban</h3>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed" data-design-text-token="body-sm">
-                Surnommée « La Belle Inutile », un parc paisible fortifié propice aux balades au grand air.
-              </p>
+            <div class="p-5 pt-0 text-[11px] font-label font-bold text-primary uppercase tracking-wider">
+              15 minutes à pied / 5 min bus
             </div>
-          </article>
+          </div>
 
         </div>
 
       </div>
     </section>
 
-    <!-- 8. "Avis de nos hôtes": 3 short review cards with stars -->
-    <section class="py-20 bg-light-surface-container/60 border-y border-light-outline-variant">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- SECTION: AVIS (3 cards labelled "Exemple d'avis") -->
+    <section class="py-16 bg-cream border-t border-sand" id="avis">
+      <div class="max-w-[1240px] mx-auto px-6 lg:px-12">
         
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="font-label text-label-sm uppercase tracking-widest text-light-primary font-semibold mb-2 block">Témoignages</span>
-          <h2 class="font-headline text-headline-lg text-light-on-surface font-bold text-balance" data-design-text-token="headline-lg">
-            Avis de nos hôtes
-          </h2>
-          <p class="font-body text-body-md text-light-on-surface-variant mt-3 text-pretty" data-design-text-token="body-md">
-            Exemples d&#39;avis : ici s&#39;afficheront les vrais retours de vos hôtes.
-          </p>
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-primary text-label-sm uppercase tracking-widest font-label font-bold block mb-1">Témoignages voyageurs</span>
+          <h2 class="text-headline-lg font-headline font-black uppercase text-text-main tracking-tight">Ce que disent nos hôtes</h2>
+          <div class="w-12 h-0.5 bg-primary mx-auto mt-4"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <!-- Review 1 -->
-          <article class="bg-light-surface-container-low p-6 rounded-2xl border border-light-outline-variant shadow-xs flex flex-col justify-between">
+          <!-- Review Card 1 -->
+          <div class="bg-sand p-8 border border-light-outline flex flex-col justify-between relative">
+            <span class="inline-block bg-primary text-white text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 mb-6 self-start">
+              Exemple d&#39;avis
+            </span>
             <div>
-              <!-- Stars -->
-              <div class="flex items-center gap-1 text-terracotta mb-4" aria-label="5 étoiles sur 5">
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+              <div class="flex items-center gap-1 text-primary mb-4">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
               </div>
-              <p class="font-headline text-title-md text-light-on-surface italic mb-4 leading-snug">
-                « Un accueil comme à la maison, plein de gentillesse et de précieux conseils. »
-              </p>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed">
-                La chambre Le Beffroi est d&#39;un calme absolu avec une literie très confortable. Et mention spéciale pour la confiture maison aux poires au petit-déjeuner !
+              <p class="text-text-main/80 text-sm italic font-body leading-relaxed mb-6">
+                « Un séjour mémorable à Arras. La maison en brique rouge a un charme fou et le studio du premier étage est d&#39;une propreté irréprochable. L&#39;accès immédiat à la Carrière Wellington est un vrai plus. »
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-light-outline-variant flex items-center justify-between">
+            <div class="pt-4 border-t border-text-main/10 flex items-center justify-between">
               <div>
-                <p class="font-label text-label-md text-light-on-surface font-semibold">Sophie &amp; Laurent</p>
-                <p class="font-body text-xs text-light-on-surface-variant">Lille, France · Séjour en octobre</p>
+                <span class="font-headline font-bold text-xs uppercase text-text-main block">Claire &amp; Antoine B.</span>
+                <span class="text-[11px] text-text-main/60">Séjour touristique · Studio 1er étage</span>
               </div>
-              <span class="text-xs bg-sage-light text-sage px-2.5 py-1 rounded-full font-label font-medium">Exemple d&#39;avis</span>
+              <span class="text-sage text-xs font-bold font-label">Exemple</span>
             </div>
-          </article>
+          </div>
 
-          <!-- Review 2 -->
-          <article class="bg-light-surface-container-low p-6 rounded-2xl border border-light-outline-variant shadow-xs flex flex-col justify-between">
+          <!-- Review Card 2 -->
+          <div class="bg-sand p-8 border border-light-outline flex flex-col justify-between relative">
+            <span class="inline-block bg-primary text-white text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 mb-6 self-start">
+              Exemple d&#39;avis
+            </span>
             <div>
-              <!-- Stars -->
-              <div class="flex items-center gap-1 text-terracotta mb-4" aria-label="5 étoiles sur 5">
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+              <div class="flex items-center gap-1 text-primary mb-4">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
               </div>
-              <p class="font-headline text-title-md text-light-on-surface italic mb-4 leading-snug">
-                « Situation idéale au cœur d&#39;Arras, on a tout visité à pied sans voiture. »
-              </p>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed">
-                Michel a été aux petits soins dès notre arrivée. Le lieu a un charme authentique rare, élégant sans chichis. Nous reviendrons avec grand plaisir.
+              <p class="text-text-main/80 text-sm italic font-body leading-relaxed mb-6">
+                « J&#39;ai loué la studette pendant un mois pour une mission professionnelle. Connexion internet ultra-rapide, calme olympien pour travailler et accueil très attentionné. Je reviendrai les yeux fermés. »
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-light-outline-variant flex items-center justify-between">
+            <div class="pt-4 border-t border-text-main/10 flex items-center justify-between">
               <div>
-                <p class="font-label text-label-md text-light-on-surface font-semibold">David &amp; Claire</p>
-                <p class="font-body text-xs text-light-on-surface-variant">Bruxelles, Belgique · Séjour en septembre</p>
+                <span class="font-headline font-bold text-xs uppercase text-text-main block">Julien M.</span>
+                <span class="text-[11px] text-text-main/60">Séjour professionnel · Studette</span>
               </div>
-              <span class="text-xs bg-sage-light text-sage px-2.5 py-1 rounded-full font-label font-medium">Exemple d&#39;avis</span>
+              <span class="text-sage text-xs font-bold font-label">Exemple</span>
             </div>
-          </article>
+          </div>
 
-          <!-- Review 3 -->
-          <article class="bg-light-surface-container-low p-6 rounded-2xl border border-light-outline-variant shadow-xs flex flex-col justify-between">
+          <!-- Review Card 3 -->
+          <div class="bg-sand p-8 border border-light-outline flex flex-col justify-between relative">
+            <span class="inline-block bg-primary text-white text-[10px] font-label font-bold uppercase tracking-widest px-3 py-1 mb-6 self-start">
+              Exemple d&#39;avis
+            </span>
             <div>
-              <!-- Stars -->
-              <div class="flex items-center gap-1 text-terracotta mb-4" aria-label="5 étoiles sur 5">
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
-                <span class="material-symbols-outlined text-lg" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+              <div class="flex items-center gap-1 text-primary mb-4">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">star</span>
               </div>
-              <p class="font-headline text-title-md text-light-on-surface italic mb-4 leading-snug">
-                « Un véritable havre de paix et un petit-déjeuner inoubliable ! »
-              </p>
-              <p class="font-body text-body-sm text-light-on-surface-variant leading-relaxed">
-                La Suite Vauban est spacieuse et très bien décorée avec de vieilles pierres d&#39;Arras. Merci Michel pour cette belle rencontre humaine.
+              <p class="text-text-main/80 text-sm italic font-body leading-relaxed mb-6">
+                « La chambre sous les combles au 2e étage possède une atmosphère chaleureuse unique. Literie haut de gamme et vue charmante sur les toits d&#39;Arras. Idéal pour un week-end en amoureux ! »
               </p>
             </div>
-            <div class="pt-6 mt-6 border-t border-light-outline-variant flex items-center justify-between">
+            <div class="pt-4 border-t border-text-main/10 flex items-center justify-between">
               <div>
-                <p class="font-label text-label-md text-light-on-surface font-semibold">Élise B.</p>
-                <p class="font-body text-xs text-light-on-surface-variant">Lyon, France · Séjour en août</p>
+                <span class="font-headline font-bold text-xs uppercase text-text-main block">Éléonore &amp; Thomas</span>
+                <span class="text-[11px] text-text-main/60">Week-end découverte · Studio 2e étage</span>
               </div>
-              <span class="text-xs bg-sage-light text-sage px-2.5 py-1 rounded-full font-label font-medium">Exemple d&#39;avis</span>
+              <span class="text-sage text-xs font-bold font-label">Exemple</span>
             </div>
-          </article>
+          </div>
 
         </div>
 
       </div>
     </section>
 
-    <!-- 9. "Contact & réservation": form (nom, e-mail, date d'arrivée, date de départ, nombre de personnes, message) next to a map placeholder -->
-    <section id="contact" class="py-20 lg:py-24">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- SECTION: CONTACT & MAP PLACEHOLDER -->
+    <section class="py-16 bg-cream border-t border-sand" id="contact">
+      <div class="max-w-[1240px] mx-auto px-6 lg:px-12">
         
-        <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="font-label text-label-sm uppercase tracking-widest text-light-primary font-semibold mb-2 block">Réserver votre séjour</span>
-          <h2 class="font-headline text-headline-lg text-light-on-surface font-bold text-balance" data-design-text-token="headline-lg">
-            Contact &amp; réservation
-          </h2>
-          <p class="font-body text-body-md text-light-on-surface-variant mt-3 text-pretty" data-design-text-token="body-md">
-            Envoyez-nous votre demande de disponibilité en quelques secondes. Michel vous répondra personnellement sous 24h.
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-primary pb-4">
+          <div>
+            <span class="text-primary text-label-sm uppercase tracking-widest font-label font-bold block mb-1">Disponibilités &amp; renseignements</span>
+            <h2 class="text-headline-lg font-headline font-black uppercase text-text-main tracking-tight">Contact &amp; Réservation</h2>
+          </div>
+          <p class="text-text-main/70 text-sm max-w-md mt-4 md:mt-0 font-body">
+            Indiquez-nous vos dates de séjour souhaitées. Nous vous répondons sous 24 heures avec les disponibilités précises.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- Booking & Contact Form -->
-          <div class="lg:col-span-7 bg-light-surface-container-low rounded-2xl border border-light-outline-variant p-8 shadow-sm">
-            <h3 class="font-headline text-title-lg text-light-on-surface mb-6 font-semibold" data-design-text-token="title-lg">Demande de disponibilité</h3>
+          <!-- FORM COLUMN (7 cols) -->
+          <div class="lg:col-span-7 bg-sand p-8 md:p-10 border border-light-outline">
+            <h3 class="font-headline font-bold text-headline-sm uppercase text-text-main mb-6">Demande de séjour</h3>
             
-            <form action="#" method="POST" class="space-y-5" onsubmit="event.preventDefault(); alert(&#39;Merci pour votre message ! Michel vous répondra très rapidement.&#39;);">
-              
+            <form onsubmit="event.preventDefault(); alert(&#39;Merci pour votre message ! Cette maquette est une version de présentation.&#39;);" class="space-y-5">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <!-- Nom -->
-                <label data-component-id="input-field-text" data-component-type="input-field" data-component-variant="text" class="flex flex-col gap-1.5">
-                  <span class="font-label text-label-md text-light-on-surface font-semibold" data-design-text-token="label-md">Nom complet *</span>
-                  <input type="text" required placeholder="Ex. Pierre Martin" class="w-full px-4 py-2.5 rounded-lg border border-light-outline bg-light-surface text-light-on-surface focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary font-body text-body-md">
-                </label>
-
-                <!-- E-mail -->
-                <label data-component-id="input-field-icon" data-component-type="input-field" data-component-variant="with-icon" class="flex flex-col gap-1.5">
-                  <span class="font-label text-label-md text-light-on-surface font-semibold" data-design-text-token="label-md">Adresse e-mail *</span>
-                  <div class="relative w-full">
-                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-light-on-surface-variant" aria-hidden="true">
-                      <span class="material-symbols-outlined text-base">mail</span>
-                    </span>
-                    <input type="email" required placeholder="votre.email@exemple.fr" class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-light-outline bg-light-surface text-light-on-surface focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary font-body text-body-md">
-                  </div>
-                </label>
+                <div>
+                  <label for="nom" class="block text-label-sm uppercase font-label font-bold text-text-main mb-2">Nom &amp; Prénom *</label>
+                  <input type="text" id="nom" required placeholder="ex. Jean Dupont" class="w-full bg-cream border border-text-main/20 text-text-main px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                </div>
+                <div>
+                  <label for="email" class="block text-label-sm uppercase font-label font-bold text-text-main mb-2">Adresse e-mail *</label>
+                  <input type="email" id="email" required placeholder="ex. contact@exemple.fr" class="w-full bg-cream border border-text-main/20 text-text-main px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                <!-- Date d'arrivée -->
-                <label class="flex flex-col gap-1.5">
-                  <span class="font-label text-label-md text-light-on-surface font-semibold">Date d&#39;arrivée *</span>
-                  <input type="date" required class="w-full px-3 py-2.5 rounded-lg border border-light-outline bg-light-surface text-light-on-surface focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary font-body text-body-sm">
-                </label>
-
-                <!-- Date de départ -->
-                <label class="flex flex-col gap-1.5">
-                  <span class="font-label text-label-md text-light-on-surface font-semibold">Date de départ *</span>
-                  <input type="date" required class="w-full px-3 py-2.5 rounded-lg border border-light-outline bg-light-surface text-light-on-surface focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary font-body text-body-sm">
-                </label>
-
-                <!-- Nombre de personnes -->
-                <label class="flex flex-col gap-1.5">
-                  <span class="font-label text-label-md text-light-on-surface font-semibold">Personnes *</span>
-                  <select class="w-full px-3 py-2.5 rounded-lg border border-light-outline bg-light-surface text-light-on-surface focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary font-body text-body-sm">
-                    <option value="1">1 personne</option>
-                    <option value="2" selected>2 personnes</option>
-                    <option value="3">3 personnes (Suite Vauban)</option>
+                <div>
+                  <label for="arrivee" class="block text-label-sm uppercase font-label font-bold text-text-main mb-2">Date d&#39;arrivée</label>
+                  <input type="date" id="arrivee" class="w-full bg-cream border border-text-main/20 text-text-main px-3 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                </div>
+                <div>
+                  <label for="depart" class="block text-label-sm uppercase font-label font-bold text-text-main mb-2">Date de départ</label>
+                  <input type="date" id="depart" class="w-full bg-cream border border-text-main/20 text-text-main px-3 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                </div>
+                <div>
+                  <label for="personnes" class="block text-label-sm uppercase font-label font-bold text-text-main mb-2">Nombre de pers.</label>
+                  <select id="personnes" class="w-full bg-cream border border-text-main/20 text-text-main px-3 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                    <option>1 personne</option>
+                    <option selected>2 personnes</option>
+                    <option>3 personnes</option>
+                    <option>Séjour de groupe / famille</option>
                   </select>
-                </label>
+                </div>
               </div>
 
-              <!-- Message -->
-              <label class="flex flex-col gap-1.5">
-                <span class="font-label text-label-md text-light-on-surface font-semibold">Message &amp; demandes particulières</span>
-                <textarea rows="4" placeholder="Heure approximative d&#39;arrivée, chambre souhaitée ou questions..." class="w-full px-4 py-2.5 rounded-lg border border-light-outline bg-light-surface text-light-on-surface focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary font-body text-body-md"></textarea>
-              </label>
+              <div>
+                <label for="message" class="block text-label-sm uppercase font-label font-bold text-text-main mb-2">Votre message ou demande spécifique</label>
+                <textarea id="message" rows="4" placeholder="Précisez votre choix d&#39;hébergement (studette, studio 1er, studio 2e) et vos besoins éventuels..." class="w-full bg-cream border border-text-main/20 text-text-main px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none"></textarea>
+              </div>
 
-              <!-- Submit Button -->
-              <div class="pt-2 flex items-center justify-between flex-wrap gap-4">
-                <p class="font-body text-xs text-light-on-surface-variant">
-                  * Champs obligatoires · Aucun prélèvement immédiat
-                </p>
-                <button type="submit" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-light-primary text-light-on-primary hover:bg-terracotta-dark transition-colors duration-state-change font-label text-label-md shadow-sm">
-                  <span data-design-text-token="label-md">Envoyer la demande</span>
+              <div class="pt-2">
+                <button type="submit" class="w-full sm:w-auto bg-primary hover:bg-primary-hover text-white font-headline font-bold text-xs uppercase tracking-widest px-8 py-4 transition-colors inline-flex items-center justify-center gap-2">
+                  <span>Envoyer la demande</span>
+                  <span class="material-symbols-outlined text-base">send</span>
                 </button>
               </div>
-
             </form>
           </div>
 
-          <!-- Map placeholder & Direct Contact info -->
-          <div class="lg:col-span-5 flex flex-col gap-6">
+          <!-- MAP & CONTACT INFO COLUMN (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
             
             <!-- Map Placeholder -->
-            <div class="w-full bg-light-surface-container rounded-2xl border border-light-outline-variant overflow-hidden shadow-xs relative aspect-[4/3] flex flex-col items-center justify-center p-6 text-center">
-              <!-- Stylized map background pattern -->
-              <div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#8F3A28 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <div class="bg-charcoal border border-charcoal text-cream relative h-64 flex flex-col items-center justify-center p-6 text-center overflow-hidden">
+              <!-- Stylized map grid pattern -->
+              <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#F7F3EE_1px,transparent_1px)] [background-size:16px_16px]"></div>
               
-              <div class="relative z-10 flex flex-col items-center">
-                <div class="w-14 h-14 rounded-full bg-light-primary text-light-on-primary flex items-center justify-center shadow-md mb-3">
-                  <span class="material-symbols-outlined text-2xl">pin_drop</span>
+              <div class="relative z-10">
+                <div class="w-12 h-12 bg-primary flex items-center justify-center mx-auto mb-3 shadow-md">
+                  <span class="material-symbols-outlined text-white text-2xl">pin_drop</span>
                 </div>
-                <h4 class="font-headline text-title-md font-bold text-light-on-surface">Plan d&#39;accès Arras</h4>
-                <p class="font-body text-body-sm text-light-on-surface-variant max-w-xs mt-1">
-                  [Emplacement de la carte interactive]
+                <h4 class="font-headline font-bold text-sm uppercase tracking-wider text-cream mb-1">Emplacement de la maison</h4>
+                <p class="text-xs text-cream/70 font-body max-w-xs mb-3">
+                  [Emplacement sur la carte — Arras centre &amp; Carrière Wellington]
                 </p>
-                <span class="inline-block mt-3 px-3 py-1 bg-light-surface-container-low rounded-full text-xs font-label text-light-primary border border-light-outline">
-                  À 8 min de la gare TGV d&#39;Arras
+                <span class="inline-block bg-white/10 text-cream/80 text-[10px] font-label uppercase tracking-widest px-3 py-1 border border-white/20">
+                  Coordonnées GPS disponibles sur réservation
                 </span>
               </div>
             </div>
 
             <!-- Direct Contact Card -->
-            <div class="bg-light-surface-container-low rounded-2xl border border-light-outline-variant p-6 shadow-xs">
-              <h4 class="font-headline text-title-md text-light-on-surface font-semibold mb-4">Informations directes</h4>
-              <ul class="space-y-3 font-body text-body-sm text-light-on-surface">
+            <div class="bg-sand p-6 border border-light-outline">
+              <h4 class="font-headline font-bold text-sm uppercase text-text-main mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">contact_support</span>
+                Informations directes
+              </h4>
+              <ul class="space-y-3 text-xs text-text-main/80 font-body">
                 <li class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-light-primary text-lg mt-0.5">location_on</span>
-                  <div>
-                    <span class="font-semibold block">Adresse</span>
-                    <span class="text-light-on-surface-variant">[12 rue des Trois Faisans, 62000 Arras]</span>
-                  </div>
+                  <span class="material-symbols-outlined text-sage text-base mt-0.5">location_on</span>
+                  <span><strong>Adresse :</strong> [adresse], 62000 Arras, France</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-light-primary text-lg mt-0.5">call</span>
-                  <div>
-                    <span class="font-semibold block">Téléphone</span>
-                    <span class="text-light-on-surface-variant">[+33 X XX XX XX XX]</span>
-                  </div>
+                  <span class="material-symbols-outlined text-sage text-base mt-0.5">call</span>
+                  <span><strong>Téléphone :</strong> [téléphone]</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-light-primary text-lg mt-0.5">mail</span>
-                  <div>
-                    <span class="font-semibold block">Courriel</span>
-                    <span class="text-light-on-surface-variant">[contact@chezmichel-arras.fr]</span>
-                  </div>
+                  <span class="material-symbols-outlined text-sage text-base mt-0.5">mail</span>
+                  <span><strong>E-mail :</strong> [e-mail]</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-sage text-base mt-0.5">schedule</span>
+                  <span><strong>Arrivée :</strong> 16h00 – 20h00 · <strong>Départ :</strong> jusqu&#39;à 11h00</span>
                 </li>
               </ul>
             </div>
@@ -836,33 +892,67 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
       </div>
     </section>
+
   </main>
 
-  <!-- 10. Footer: name, "Arras (62)", links "Mentions légales" and "Contact" -->
-  <footer class="bg-light-surface-container border-t border-light-outline-variant py-12">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- CHARCOAL FOOTER -->
+  <footer class="bg-charcoal text-cream border-t-4 border-primary pt-14 pb-10">
+    <div class="max-w-[1240px] mx-auto px-6 lg:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10 items-start">
         
-        <div class="flex flex-col items-center md:items-start text-center md:text-left">
-          <span class="font-headline text-title-lg font-bold text-light-on-surface" data-design-text-token="title-lg">Chez Michel</span>
-          <p class="font-body text-body-sm text-light-on-surface-variant mt-0.5">
-            Chambres d&#39;hôtes de charme · Arras (62) · Hauts-de-France
+        <!-- Left: Brick-red Logo Block -->
+        <div class="md:col-span-5">
+          <div class="inline-block bg-primary px-6 py-4 mb-4">
+            <span class="font-script text-3xl md:text-4xl text-cream block leading-tight">Chez Michel</span>
+            <span class="font-label text-[9px] uppercase tracking-[0.2em] text-cream/90 block">Hôtel particulier · Années 1920</span>
+          </div>
+          <p class="text-xs text-cream/70 font-body max-w-sm leading-relaxed mt-2">
+            Maison d&#39;hôtes et studios meublés de caractère situés à Arras. Atmosphère flamande en brique rouge, confort chaleureux et sérénité.
           </p>
         </div>
 
-        <nav class="flex items-center gap-6 font-body text-body-sm" aria-label="Liens de pied de page">
-          <a href="#" class="text-light-on-surface-variant hover:text-light-primary transition-colors">Mentions légales</a>
-          <span class="text-light-outline">·</span>
-          <a href="#contact" class="text-light-on-surface-variant hover:text-light-primary transition-colors">Contact</a>
-          <span class="text-light-outline">·</span>
-          <a href="#tarifs" class="text-light-on-surface-variant hover:text-light-primary transition-colors">Tarifs</a>
-        </nav>
+        <!-- Middle: Address placeholder -->
+        <div class="md:col-span-4">
+          <h4 class="font-headline font-bold text-xs uppercase tracking-widest text-primary mb-4">Nous trouver</h4>
+          <p class="text-xs text-cream/80 font-body leading-relaxed mb-3">
+            [adresse]<br>
+            62000 Arras — Pas-de-Calais<br>
+            Région Hauts-de-France
+          </p>
+          <p class="text-xs text-cream/80 font-body">
+            Téléphone : <span class="text-cream font-bold">[téléphone]</span>
+          </p>
+        </div>
 
-        <p class="font-body text-xs text-light-on-surface-variant text-center md:text-right">
-          © 2026 Chez Michel · Tous droits réservés
-        </p>
+        <!-- Right: Fast links -->
+        <div class="md:col-span-3">
+          <h4 class="font-headline font-bold text-xs uppercase tracking-widest text-primary mb-4">Plan du site</h4>
+          <ul class="space-y-2 text-xs font-label uppercase tracking-wider">
+            <li><a href="#chambres" class="text-cream/70 hover:text-white transition-colors">Chambres &amp; Studios</a></li>
+            <li><a href="#tarifs" class="text-cream/70 hover:text-white transition-colors">Tarifs &amp; Long séjour</a></li>
+            <li><a href="#quartier" class="text-cream/70 hover:text-white transition-colors">Le quartier</a></li>
+            <li><a href="#contact" class="text-cream/70 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="#mentions" class="text-cream/70 hover:text-white transition-colors">Mentions légales</a></li>
+          </ul>
+        </div>
 
       </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-cream/50 font-label tracking-wider gap-4">
+        <div>
+          © Chez Michel Arras — Tous droits réservés.
+        </div>
+        <div class="flex items-center gap-6 uppercase">
+          <a href="#mentions" class="hover:text-cream transition-colors">Mentions légales</a>
+          <span>·</span>
+          <a href="#mentions" class="hover:text-cream transition-colors">Politique de confidentialité</a>
+          <span>·</span>
+          <a href="#contact" class="hover:text-cream transition-colors">Contact</a>
+        </div>
+      </div>
+
     </div>
   </footer>
 
