@@ -7,8 +7,8 @@ export const profile = {
   lastName: 'Thompson',
   title: 'Développeur Web & Mobile',
   role: 'Étudiant BTS SIO',
-  availability: "Recherche une alternance pour ma licence professionnelle (rentrée 2027)",
-  status: 'RECHERCHE_ALTERNANCE_LICENCE_PRO',
+  availability: "Recherche une alternance en bac+3 (rentrée 2027)",
+  status: 'RECHERCHE_ALTERNANCE_BAC3',
   summary: [
     "Actuellement étudiant dans l'informatique, je suis doté d'une excellente attention aux détails et disponible pour travailler de manière flexible, y compris à distance.",
     "En BTS SIO, je conçois des sites web et des applications mobiles : de la modélisation des données jusqu'à l'API qui fait communiquer le tout.",
@@ -27,7 +27,7 @@ export const heroTags = ['PHP', 'Symfony', 'Flutter', 'Dart', 'SQL', 'Python']
 export const stats = [
   { value: '2', label: 'Stages réalisés' },
   { value: '14', label: 'Technologies' },
-  { value: '2027', label: "Rentrée de ma licence professionnelle en alternance" },
+  { value: '2027', label: "Rentrée de mon bac+3 en alternance" },
 ]
 
 // Savoir-être, présentés comme une façon de travailler
