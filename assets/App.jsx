@@ -171,7 +171,7 @@ function Hero() {
       <div className="hero__code hero__code--tl" aria-hidden="true">
         <p>// portfolio.jsx</p>
         <p>// formation: BTS SIO</p>
-        <p>// statut: recherche de stage</p>
+        <p>// statut: recherche d'alternance</p>
         <p>// last_build: {today}</p>
       </div>
       <div className="hero__code hero__code--tr" aria-hidden="true">
@@ -219,7 +219,7 @@ function Hero() {
       <p className="hero__corner hero__corner--bl">{profile.location.toUpperCase()}</p>
       <div className="hero__corner hero__corner--br" aria-hidden="true">
         <p>const formation = "BTS SIO";</p>
-        <p>const stage = "6 semaines";</p>
+        <p>const alternance = "licence pro";</p>
         <p>const motivation = Infinity;</p>
       </div>
       <a href="#about" className="hero__down" aria-label="Défiler vers le bas">
@@ -466,7 +466,7 @@ function Contact() {
       <div className="contact">
         <div className="contact__info reveal">
           <p className="body-text">
-            Je recherche un stage de 6 semaines du 4 janvier au 13 février. Une question, une proposition ou simplement envie d'échanger ?
+            Je recherche une alternance pour ma licence professionnelle, à partir de la rentrée 2027. Une question, une proposition ou simplement envie d'échanger ?
             Écrivez-moi, je vous répondrai rapidement.
           </p>
           <div className="info-card">
